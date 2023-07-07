@@ -1,5 +1,6 @@
 package funkin.editors.charter;
 
+import funkin.backend.system.framerate.Framerate;
 import haxe.Json;
 import flixel.input.keyboard.FlxKey;
 import flixel.sound.FlxSound;
@@ -201,6 +202,11 @@ class Charter extends UIState {
 					{
 						label: "Edit metadata information",
 						onSelect: chart_edit_metadata
+					},
+					null,
+					{
+						label: "Edit chart data",
+						onSelect: chart_edit_data
 					}
 				]
 			},
@@ -419,6 +425,10 @@ class Charter extends UIState {
 		add(uiGroup);
 
 		loadSong();
+
+		Framerate.fpsCounter.alpha = 0.4;
+		Framerate.memoryCounter.alpha = 0.4;
+		Framerate.codenameBuildField.alpha = 0.4;
 	}
 
 	var instPath:String;
@@ -1072,6 +1082,13 @@ class Charter extends UIState {
 			undoList.insert(0, v);
 	}
 
+	override function destroy() {
+		Framerate.fpsCounter.alpha = 1;
+		Framerate.memoryCounter.alpha = 1;
+		Framerate.codenameBuildField.alpha = 1;
+		super.destroy();
+	}
+
 	inline function _chart_playtest(_)
 		playtestChart(0, false);
 	inline function _chart_playtest_here(_)
@@ -1085,6 +1102,8 @@ class Charter extends UIState {
 	}
 	function chart_edit_metadata(_)
 		FlxG.state.openSubState(new MetaDataScreen(PlayState.SONG.meta));
+	function chart_edit_data(_)
+		FlxG.state.openSubState(new ChartDataScreen(PlayState.SONG));
 
 	function _playback_metronome(t) {
 		t.icon = (Options.charterMetronomeEnabled = !Options.charterMetronomeEnabled) ? 1 : 0;
