@@ -23,7 +23,9 @@ class TextOption extends OptionType {
 	public override function onSelect() {
 		super.onSelect();
 		CoolUtil.playMenuSFX(CONFIRM);
-		FlxFlicker.flicker(this, 1, Options.flashingMenu ? 0.06 : 0.15, true, false);
+		FlxFlicker.flicker(this, 1, Options.flashingMenu ? 0.06 : 0.15, true, false, function(t) {
+
+		});
 		selectCallback();
 	}
 }
