@@ -64,15 +64,9 @@ class OptionsScreen extends FlxTypedSpriteGroup<OptionType> {
 		CoolUtil.playMenuSFX(SCROLL);
 		curSelected = FlxMath.wrap(curSelected + sel, 0, members.length-1);
 		members[curSelected].selected = true;
-		updateMenuDesc();
-	}
-
-	public function updateMenuDesc(?customTxt:String) {
-		if (parent.treeParent == null) return;
-		
-		var text:String = members[curSelected].desc;
-		if (customTxt != null) text = customTxt;
-		parent.treeParent.updateDesc(text);
+		if (parent.treeParent != null) {
+			parent.treeParent.updateDesc(members[curSelected].desc);
+		}
 	}
 
 	public dynamic function onClose(o:OptionsScreen) {}
