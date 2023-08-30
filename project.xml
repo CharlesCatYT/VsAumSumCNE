@@ -101,6 +101,7 @@
 	<icon path="art/iconOG.png" size='512' />
 	<icon path="art/iconOG.png" size='768' />
 
+	<assets path='art/iconOG.png' rename='icon.png' if="linux" />
 
 	<!-- _________________________________ Engine Settings _______________________________ -->
 
