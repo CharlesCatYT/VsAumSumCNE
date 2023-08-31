@@ -14,11 +14,11 @@
 	- [x] Cap zoom in & out
 	- [x] Events (including Camera Movement)
 	- [x] Metadata Editing
+        - [x] New Chart Button
+        - [x] Quantization
 	- [ ] Custom Notetypes
 	- [ ] Reorderable Strumlines
-	- [ ] Step based zooming
 	- [ ] Add Undo to more actions
-	- [ ] New Chart Button
 	- [ ] Bug fixes
 		- [ ] Zooming in causing notes to disappear
 		- [ ] Holds disappear too early
