@@ -14,8 +14,8 @@
 	- [x] Cap zoom in & out
 	- [x] Events (including Camera Movement)
 	- [x] Metadata Editing
-        - [x] New Chart Button
-        - [x] Quantization
+    - [x] New Chart Button
+    - [x] Quantization
 	- [ ] Custom Notetypes
 	- [ ] Reorderable Strumlines
 	- [ ] Add Undo to more actions
