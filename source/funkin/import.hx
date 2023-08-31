@@ -1,4 +1,9 @@
 #if !macro
+import haxe.*;
+import flixel.*;
+import openfl.*;
+import lime.*;
+
 import funkin.backend.assets.Paths;
 import funkin.backend.MusicBeatState;
 import funkin.backend.MusicBeatSubstate;
