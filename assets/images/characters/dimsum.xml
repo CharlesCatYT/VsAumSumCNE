@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="dimsum.png">
+<SubTexture name="dimsum idle0000" x="668" y="1346" width="297" height="410" frameX="0" frameY="-17" frameWidth="297" frameHeight="427" />
+<SubTexture name="dimsum idle0001" x="1680" y="0" width="268" height="419" frameX="-19" frameY="-8" frameWidth="297" frameHeight="427" />
+<SubTexture name="dimsum idle0002" x="1326" y="429" width="271" height="427" frameX="-13" frameY="0" frameWidth="297" frameHeight="427" />
+<SubTexture name="dimsum right0000" x="0" y="919" width="358" height="427" frameX="-38" frameY="0" frameWidth="415" frameHeight="427" />
+<SubTexture name="dimsum right0001" x="358" y="919" width="358" height="427" frameX="-34" frameY="0" frameWidth="415" frameHeight="427" />
+<SubTexture name="dimsum left0000" x="716" y="919" width="277" height="427" frameX="0" frameY="0" frameWidth="300" frameHeight="427" />
+<SubTexture name="dimsum left0001" x="1003" y="429" width="276" height="427" frameX="-11" frameY="0" frameWidth="300" frameHeight="427" />
+<SubTexture name="dimsum up0000" x="337" y="0" width="307" height="468" frameX="0" frameY="0" frameWidth="320" frameHeight="468" />
+<SubTexture name="dimsum up0001" x="0" y="483" width="306" height="436" frameX="-10" frameY="-32" frameWidth="320" frameHeight="468" />
+<SubTexture name="dimsum down0000" x="1948" y="0" width="370" height="394" frameX="-10" frameY="-18" frameWidth="400" frameHeight="412" />
+<SubTexture name="dimsum down0001" x="0" y="1346" width="350" height="412" frameX="-4" frameY="0" frameWidth="400" frameHeight="412" />
+<SubTexture name="dimsum sad0000" x="993" y="919" width="257" height="427" frameX="-13" frameY="0" frameWidth="297" frameHeight="427" />
+<SubTexture name="dimsum homicide idle0000" x="1308" y="1346" width="359" height="405" frameX="0" frameY="-22" frameWidth="359" frameHeight="427" />
+<SubTexture name="dimsum homicide idle0001" x="350" y="1346" width="318" height="412" frameX="-29" frameY="-15" frameWidth="359" frameHeight="427" />
+<SubTexture name="dimsum homicide idle0002" x="1250" y="919" width="301" height="427" frameX="-28" frameY="0" frameWidth="359" frameHeight="427" />
+<SubTexture name="dimsum homicide right0000" x="306" y="483" width="332" height="430" frameX="0" frameY="0" frameWidth="332" frameHeight="430" />
+<SubTexture name="dimsum homicide right0001" x="638" y="483" width="314" height="430" frameX="-12" frameY="0" frameWidth="332" frameHeight="430" />
+<SubTexture name="dimsum homicide left0000" x="1003" y="0" width="323" height="429" frameX="0" frameY="0" frameWidth="355" frameHeight="429" />
+<SubTexture name="dimsum homicide left0001" x="1326" y="0" width="354" height="429" frameX="-1" frameY="0" frameWidth="355" frameHeight="429" />
+<SubTexture name="dimsum homicide up0000" x="0" y="0" width="337" height="483" frameX="-4" frameY="0" frameWidth="359" frameHeight="483" />
+<SubTexture name="dimsum homicide up0001" x="644" y="0" width="359" height="457" frameX="0" frameY="-26" frameWidth="359" frameHeight="483" />
+<SubTexture name="dimsum homicide down0000" x="0" y="1758" width="377" height="392" frameX="0" frameY="-16" frameWidth="377" frameHeight="408" />
+<SubTexture name="dimsum homicide down0001" x="965" y="1346" width="343" height="408" frameX="-12" frameY="0" frameWidth="377" frameHeight="408" />
+</TextureAtlas>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="aumsum redesign.png">
+<SubTexture name="aumsum redesign idle0000" x="1219" y="0" width="332" height="513" frameX="0" frameY="-17" frameWidth="332" frameHeight="530" />
+<SubTexture name="aumsum redesign idle0001" x="282" y="556" width="284" height="523" frameX="-32" frameY="-7" frameWidth="332" frameHeight="530" />
+<SubTexture name="aumsum redesign idle0002" x="655" y="0" width="264" height="530" frameX="-47" frameY="0" frameWidth="332" frameHeight="530" />
+<SubTexture name="aumsum redesign idle0003" x="655" y="0" width="264" height="530" frameX="-47" frameY="0" frameWidth="332" frameHeight="530" />
+<SubTexture name="aumsum redesign idle0004" x="655" y="0" width="264" height="530" frameX="-47" frameY="0" frameWidth="332" frameHeight="530" />
+<SubTexture name="aumsum redesign idle0005" x="655" y="0" width="264" height="530" frameX="-47" frameY="0" frameWidth="332" frameHeight="530" />
+<SubTexture name="aumsum redesign idle0006" x="655" y="0" width="264" height="530" frameX="-47" frameY="0" frameWidth="332" frameHeight="530" />
+<SubTexture name="aumsum redesign idle0007" x="655" y="0" width="264" height="530" frameX="-47" frameY="0" frameWidth="332" frameHeight="530" />
+<SubTexture name="aumsum redesign idle0008" x="655" y="0" width="264" height="530" frameX="-47" frameY="0" frameWidth="332" frameHeight="530" />
+<SubTexture name="aumsum redesign idle0009" x="655" y="0" width="264" height="530" frameX="-47" frameY="0" frameWidth="332" frameHeight="530" />
+<SubTexture name="aumsum redesign idle0010" x="655" y="0" width="264" height="530" frameX="-47" frameY="0" frameWidth="332" frameHeight="530" />
+<SubTexture name="aumsum redesign idle0011" x="655" y="0" width="264" height="530" frameX="-47" frameY="0" frameWidth="332" frameHeight="530" />
+<SubTexture name="aumsum redesign idle0012" x="655" y="0" width="264" height="530" frameX="-47" frameY="0" frameWidth="332" frameHeight="530" />
+<SubTexture name="aumsum redesign idle0013" x="655" y="0" width="264" height="530" frameX="-47" frameY="0" frameWidth="332" frameHeight="530" />
+<SubTexture name="aumsum redesign left0000" x="566" y="556" width="275" height="523" frameX="0" frameY="0" frameWidth="275" frameHeight="523" />
+<SubTexture name="aumsum redesign left0001" x="841" y="556" width="266" height="523" frameX="-3" frameY="0" frameWidth="275" frameHeight="523" />
+<SubTexture name="aumsum redesign right0000" x="919" y="0" width="300" height="530" frameX="0" frameY="0" frameWidth="300" frameHeight="530" />
+<SubTexture name="aumsum redesign right0001" x="0" y="556" width="282" height="530" frameX="-14" frameY="0" frameWidth="300" frameHeight="530" />
+<SubTexture name="aumsum redesign up0000" x="0" y="0" width="336" height="556" frameX="-19" frameY="0" frameWidth="375" frameHeight="556" />
+<SubTexture name="aumsum redesign up0001" x="336" y="0" width="319" height="545" frameX="-44" frameY="-11" frameWidth="375" frameHeight="556" />
+<SubTexture name="aumsum redesign down0000" x="1551" y="0" width="307" height="468" frameX="-32" frameY="-22" frameWidth="350" frameHeight="490" />
+<SubTexture name="aumsum redesign down0001" x="1219" y="513" width="298" height="490" frameX="0" frameY="0" frameWidth="350" frameHeight="490" />
+</TextureAtlas>

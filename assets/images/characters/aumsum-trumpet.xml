@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="AumSum_Trumpet.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Aum trumpet down0000" x="0" y="0" width="427" height="471" frameX="-8" frameY="-5" frameWidth="435" frameHeight="476"/>
+	<SubTexture name="Aum trumpet down0001" x="0" y="0" width="427" height="471" frameX="-8" frameY="-5" frameWidth="435" frameHeight="476"/>
+	<SubTexture name="Aum trumpet down0002" x="0" y="0" width="427" height="471" frameX="-8" frameY="-5" frameWidth="435" frameHeight="476"/>
+	<SubTexture name="Aum trumpet down0003" x="427" y="0" width="420" height="476" frameX="0" frameY="0" frameWidth="435" frameHeight="476"/>
+	<SubTexture name="Aum trumpet down0004" x="427" y="0" width="420" height="476" frameX="0" frameY="0" frameWidth="435" frameHeight="476"/>
+	<SubTexture name="Aum trumpet down0005" x="427" y="0" width="420" height="476" frameX="0" frameY="0" frameWidth="435" frameHeight="476"/>
+	<SubTexture name="Aum trumpet down0006" x="427" y="0" width="420" height="476" frameX="0" frameY="0" frameWidth="435" frameHeight="476"/>
+	<SubTexture name="Aum trumpet down0007" x="427" y="0" width="420" height="476" frameX="0" frameY="0" frameWidth="435" frameHeight="476"/>
+	<SubTexture name="Aum trumpet down0008" x="427" y="0" width="420" height="476" frameX="0" frameY="0" frameWidth="435" frameHeight="476"/>
+	<SubTexture name="Aum trumpet down0009" x="427" y="0" width="420" height="476" frameX="0" frameY="0" frameWidth="435" frameHeight="476"/>
+	<SubTexture name="Aum trumpet down0010" x="427" y="0" width="420" height="476" frameX="0" frameY="0" frameWidth="435" frameHeight="476"/>
+	<SubTexture name="Aum trumpet down0011" x="427" y="0" width="420" height="476" frameX="0" frameY="0" frameWidth="435" frameHeight="476"/>
+	<SubTexture name="Aum trumpet down0012" x="427" y="0" width="420" height="476" frameX="0" frameY="0" frameWidth="435" frameHeight="476"/>
+	<SubTexture name="Aum trumpet down0013" x="427" y="0" width="420" height="476" frameX="0" frameY="0" frameWidth="435" frameHeight="476"/>
+	<SubTexture name="Aum trumpet down0014" x="427" y="0" width="420" height="476" frameX="0" frameY="0" frameWidth="435" frameHeight="476"/>
+	<SubTexture name="Aum trumpet idle0000" x="847" y="0" width="322" height="484" frameX="0" frameY="-16" frameWidth="359" frameHeight="500"/>
+	<SubTexture name="Aum trumpet idle0001" x="847" y="0" width="322" height="484" frameX="0" frameY="-16" frameWidth="359" frameHeight="500"/>
+	<SubTexture name="Aum trumpet idle0002" x="847" y="0" width="322" height="484" frameX="0" frameY="-16" frameWidth="359" frameHeight="500"/>
+	<SubTexture name="Aum trumpet idle0003" x="1169" y="0" width="332" height="491" frameX="-11" frameY="-9" frameWidth="359" frameHeight="500"/>
+	<SubTexture name="Aum trumpet idle0004" x="1169" y="0" width="332" height="491" frameX="-11" frameY="-9" frameWidth="359" frameHeight="500"/>
+	<SubTexture name="Aum trumpet idle0005" x="1501" y="0" width="345" height="500" frameX="-14" frameY="0" frameWidth="359" frameHeight="500"/>
+	<SubTexture name="Aum trumpet idle0006" x="1501" y="0" width="345" height="500" frameX="-14" frameY="0" frameWidth="359" frameHeight="500"/>
+	<SubTexture name="Aum trumpet idle0007" x="1501" y="0" width="345" height="500" frameX="-14" frameY="0" frameWidth="359" frameHeight="500"/>
+	<SubTexture name="Aum trumpet idle0008" x="1501" y="0" width="345" height="500" frameX="-14" frameY="0" frameWidth="359" frameHeight="500"/>
+	<SubTexture name="Aum trumpet idle0009" x="1501" y="0" width="345" height="500" frameX="-14" frameY="0" frameWidth="359" frameHeight="500"/>
+	<SubTexture name="Aum trumpet idle0010" x="1501" y="0" width="345" height="500" frameX="-14" frameY="0" frameWidth="359" frameHeight="500"/>
+	<SubTexture name="Aum trumpet idle0011" x="1501" y="0" width="345" height="500" frameX="-14" frameY="0" frameWidth="359" frameHeight="500"/>
+	<SubTexture name="Aum trumpet idle0012" x="1501" y="0" width="345" height="500" frameX="-14" frameY="0" frameWidth="359" frameHeight="500"/>
+	<SubTexture name="Aum trumpet idle0013" x="1501" y="0" width="345" height="500" frameX="-14" frameY="0" frameWidth="359" frameHeight="500"/>
+	<SubTexture name="Aum trumpet idle0014" x="1501" y="0" width="345" height="500" frameX="-14" frameY="0" frameWidth="359" frameHeight="500"/>
+	<SubTexture name="Aum trumpet left0000" x="0" y="500" width="419" height="500"/>
+	<SubTexture name="Aum trumpet left0001" x="0" y="500" width="419" height="500"/>
+	<SubTexture name="Aum trumpet left0002" x="0" y="500" width="419" height="500"/>
+	<SubTexture name="Aum trumpet left0003" x="419" y="500" width="411" height="500" frameX="-4" frameY="0" frameWidth="419" frameHeight="500"/>
+	<SubTexture name="Aum trumpet left0004" x="419" y="500" width="411" height="500" frameX="-4" frameY="0" frameWidth="419" frameHeight="500"/>
+	<SubTexture name="Aum trumpet left0005" x="419" y="500" width="411" height="500" frameX="-4" frameY="0" frameWidth="419" frameHeight="500"/>
+	<SubTexture name="Aum trumpet left0006" x="419" y="500" width="411" height="500" frameX="-4" frameY="0" frameWidth="419" frameHeight="500"/>
+	<SubTexture name="Aum trumpet left0007" x="419" y="500" width="411" height="500" frameX="-4" frameY="0" frameWidth="419" frameHeight="500"/>
+	<SubTexture name="Aum trumpet left0008" x="419" y="500" width="411" height="500" frameX="-4" frameY="0" frameWidth="419" frameHeight="500"/>
+	<SubTexture name="Aum trumpet left0009" x="419" y="500" width="411" height="500" frameX="-4" frameY="0" frameWidth="419" frameHeight="500"/>
+	<SubTexture name="Aum trumpet left0010" x="419" y="500" width="411" height="500" frameX="-4" frameY="0" frameWidth="419" frameHeight="500"/>
+	<SubTexture name="Aum trumpet left0011" x="419" y="500" width="411" height="500" frameX="-4" frameY="0" frameWidth="419" frameHeight="500"/>
+	<SubTexture name="Aum trumpet left0012" x="419" y="500" width="411" height="500" frameX="-4" frameY="0" frameWidth="419" frameHeight="500"/>
+	<SubTexture name="Aum trumpet left0013" x="419" y="500" width="411" height="500" frameX="-4" frameY="0" frameWidth="419" frameHeight="500"/>
+	<SubTexture name="Aum trumpet left0014" x="419" y="500" width="411" height="500" frameX="-4" frameY="0" frameWidth="419" frameHeight="500"/>
+	<SubTexture name="Aum trumpet right0000" x="830" y="500" width="387" height="500" frameX="-4" frameY="0" frameWidth="391" frameHeight="500"/>
+	<SubTexture name="Aum trumpet right0001" x="830" y="500" width="387" height="500" frameX="-4" frameY="0" frameWidth="391" frameHeight="500"/>
+	<SubTexture name="Aum trumpet right0002" x="830" y="500" width="387" height="500" frameX="-4" frameY="0" frameWidth="391" frameHeight="500"/>
+	<SubTexture name="Aum trumpet right0003" x="1217" y="500" width="387" height="500" frameX="0" frameY="0" frameWidth="391" frameHeight="500"/>
+	<SubTexture name="Aum trumpet right0004" x="1217" y="500" width="387" height="500" frameX="0" frameY="0" frameWidth="391" frameHeight="500"/>
+	<SubTexture name="Aum trumpet right0005" x="1217" y="500" width="387" height="500" frameX="0" frameY="0" frameWidth="391" frameHeight="500"/>
+	<SubTexture name="Aum trumpet right0006" x="1217" y="500" width="387" height="500" frameX="0" frameY="0" frameWidth="391" frameHeight="500"/>
+	<SubTexture name="Aum trumpet right0007" x="1217" y="500" width="387" height="500" frameX="0" frameY="0" frameWidth="391" frameHeight="500"/>
+	<SubTexture name="Aum trumpet right0008" x="1217" y="500" width="387" height="500" frameX="0" frameY="0" frameWidth="391" frameHeight="500"/>
+	<SubTexture name="Aum trumpet right0009" x="1217" y="500" width="387" height="500" frameX="0" frameY="0" frameWidth="391" frameHeight="500"/>
+	<SubTexture name="Aum trumpet right0010" x="1217" y="500" width="387" height="500" frameX="0" frameY="0" frameWidth="391" frameHeight="500"/>
+	<SubTexture name="Aum trumpet right0011" x="1217" y="500" width="387" height="500" frameX="0" frameY="0" frameWidth="391" frameHeight="500"/>
+	<SubTexture name="Aum trumpet right0012" x="1217" y="500" width="387" height="500" frameX="0" frameY="0" frameWidth="391" frameHeight="500"/>
+	<SubTexture name="Aum trumpet right0013" x="1217" y="500" width="387" height="500" frameX="0" frameY="0" frameWidth="391" frameHeight="500"/>
+	<SubTexture name="Aum trumpet right0014" x="1217" y="500" width="387" height="500" frameX="0" frameY="0" frameWidth="391" frameHeight="500"/>
+	<SubTexture name="Aum trumpet up0000" x="0" y="1000" width="458" height="512"/>
+	<SubTexture name="Aum trumpet up0001" x="0" y="1000" width="458" height="512"/>
+	<SubTexture name="Aum trumpet up0002" x="0" y="1000" width="458" height="512"/>
+	<SubTexture name="Aum trumpet up0003" x="458" y="1000" width="449" height="507" frameX="-6" frameY="-5" frameWidth="458" frameHeight="512"/>
+	<SubTexture name="Aum trumpet up0004" x="458" y="1000" width="449" height="507" frameX="-6" frameY="-5" frameWidth="458" frameHeight="512"/>
+	<SubTexture name="Aum trumpet up0005" x="458" y="1000" width="449" height="507" frameX="-6" frameY="-5" frameWidth="458" frameHeight="512"/>
+	<SubTexture name="Aum trumpet up0006" x="458" y="1000" width="449" height="507" frameX="-6" frameY="-5" frameWidth="458" frameHeight="512"/>
+	<SubTexture name="Aum trumpet up0007" x="458" y="1000" width="449" height="507" frameX="-6" frameY="-5" frameWidth="458" frameHeight="512"/>
+	<SubTexture name="Aum trumpet up0008" x="458" y="1000" width="449" height="507" frameX="-6" frameY="-5" frameWidth="458" frameHeight="512"/>
+	<SubTexture name="Aum trumpet up0009" x="458" y="1000" width="449" height="507" frameX="-6" frameY="-5" frameWidth="458" frameHeight="512"/>
+	<SubTexture name="Aum trumpet up0010" x="458" y="1000" width="449" height="507" frameX="-6" frameY="-5" frameWidth="458" frameHeight="512"/>
+	<SubTexture name="Aum trumpet up0011" x="458" y="1000" width="449" height="507" frameX="-6" frameY="-5" frameWidth="458" frameHeight="512"/>
+	<SubTexture name="Aum trumpet up0012" x="458" y="1000" width="449" height="507" frameX="-6" frameY="-5" frameWidth="458" frameHeight="512"/>
+	<SubTexture name="Aum trumpet up0013" x="458" y="1000" width="449" height="507" frameX="-6" frameY="-5" frameWidth="458" frameHeight="512"/>
+	<SubTexture name="Aum trumpet up0014" x="458" y="1000" width="449" height="507" frameX="-6" frameY="-5" frameWidth="458" frameHeight="512"/>
+</TextureAtlas>

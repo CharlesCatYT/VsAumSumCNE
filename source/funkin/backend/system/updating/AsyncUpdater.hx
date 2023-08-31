@@ -30,15 +30,15 @@ class AsyncUpdater {
 	
 	#if windows 
 	public static var executableGitHubName:String = "update-windows.exe";
-	public static var executableName:String = "CodenameEngine.exe";
+	public static var executableName:String = "VsAumSum.exe";
 	#end
 	#if linux
 	public static var executableGitHubName:String = "update-linux";
-	public static var executableName:String = "CodenameEngine";
+	public static var executableName:String = "VsAumSum";
 	#end
 	#if mac
 	public static var executableGitHubName:String = "update-mac";
-	public static var executableName:String = "CodenameEngine";
+	public static var executableName:String = "VsAumSum";
 	#end
 
 	public var releases:Array<GitHubRelease>;

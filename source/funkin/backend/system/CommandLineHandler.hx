@@ -10,7 +10,7 @@ class CommandLineHandler {
 				case null:
 					break;
 				case "-h" | "-help" | "help":
-					Sys.println("-- Codename Engine Command Line help --");
+					Sys.println("-- Vs. AumSum Command Line help --");
 					Sys.println("-help              | Show this help");
 					#if MOD_SUPPORT
 					Sys.println("-mod [mod name]    | Load a specific mod");

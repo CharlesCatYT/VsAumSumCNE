@@ -113,7 +113,7 @@ class Options
 
 	public static function load() {
 		if (__save == null) __save = new FlxSave();
-		__save.bind("options", "CodenameEngine");
+		__save.bind("options", "VsAumSum");
 		__load();
 
 		if (!__eventAdded) {

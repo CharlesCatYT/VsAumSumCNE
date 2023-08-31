@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="bf dimsum.png">
+<SubTexture name="bf dimsum idle0000" x="1416" y="461" width="337" height="454" frameX="-22" frameY="-31" frameWidth="400" frameHeight="485" />
+<SubTexture name="bf dimsum idle0001" x="1036" y="480" width="339" height="469" frameX="-44" frameY="-16" frameWidth="400" frameHeight="485" />
+<SubTexture name="bf dimsum idle0002" x="360" y="0" width="338" height="485" frameX="-62" frameY="0" frameWidth="400" frameHeight="485" />
+<SubTexture name="bf dimsum left0000" x="698" y="0" width="338" height="485" frameX="-41" frameY="0" frameWidth="400" frameHeight="485" />
+<SubTexture name="bf dimsum left0001" x="0" y="499" width="338" height="485" frameX="-49" frameY="0" frameWidth="400" frameHeight="485" />
+<SubTexture name="bf dimsum right0000" x="338" y="499" width="343" height="485" frameX="-15" frameY="0" frameWidth="375" frameHeight="485" />
+<SubTexture name="bf dimsum right0001" x="681" y="499" width="346" height="485" frameX="0" frameY="0" frameWidth="375" frameHeight="485" />
+<SubTexture name="bf dimsum up0000" x="0" y="0" width="360" height="499" frameX="-37" frameY="0" frameWidth="400" frameHeight="499" />
+<SubTexture name="bf dimsum up0001" x="1036" y="0" width="380" height="480" frameX="-19" frameY="-19" frameWidth="400" frameHeight="499" />
+<SubTexture name="bf dimsum down0000" x="0" y="984" width="377" height="429" frameX="-10" frameY="-32" frameWidth="400" frameHeight="461" />
+<SubTexture name="bf dimsum down0001" x="1416" y="0" width="348" height="461" frameX="-43" frameY="0" frameWidth="400" frameHeight="461" />
+</TextureAtlas>

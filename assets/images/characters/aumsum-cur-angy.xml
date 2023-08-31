@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="aumsum_current_mad.png">
+<SubTexture name="madsum idle0000" x="1282" y="1012" width="359" height="474" frameX="0" frameY="-26" frameWidth="359" frameHeight="500" />
+<SubTexture name="madsum idle0001" x="924" y="1012" width="358" height="488" frameX="-1" frameY="-12" frameWidth="359" frameHeight="500" />
+<SubTexture name="madsum idle0002" x="0" y="512" width="358" height="500" frameX="0" frameY="0" frameWidth="358" frameHeight="500" />
+<SubTexture name="madsum idle0003" x="0" y="512" width="358" height="500" frameX="0" frameY="0" frameWidth="358" frameHeight="500" />
+<SubTexture name="madsum idle0004" x="0" y="512" width="358" height="500" frameX="0" frameY="0" frameWidth="358" frameHeight="500" />
+<SubTexture name="madsum idle0005" x="0" y="512" width="358" height="500" frameX="0" frameY="0" frameWidth="358" frameHeight="500" />
+<SubTexture name="madsum idle0006" x="0" y="512" width="358" height="500" frameX="0" frameY="0" frameWidth="358" frameHeight="500" />
+<SubTexture name="madsum idle0007" x="0" y="512" width="358" height="500" frameX="0" frameY="0" frameWidth="358" frameHeight="500" />
+<SubTexture name="madsum idle0008" x="0" y="512" width="358" height="500" frameX="0" frameY="0" frameWidth="358" frameHeight="500" />
+<SubTexture name="madsum idle0009" x="0" y="512" width="358" height="500" frameX="0" frameY="0" frameWidth="358" frameHeight="500" />
+<SubTexture name="madsum right0000" x="1458" y="0" width="472" height="499" frameX="-8" frameY="0" frameWidth="480" frameHeight="499" />
+<SubTexture name="madsum right0001" x="821" y="512" width="474" height="499" frameX="0" frameY="0" frameWidth="480" frameHeight="499" />
+<SubTexture name="madsum right0002" x="358" y="512" width="463" height="499" frameX="-5" frameY="0" frameWidth="480" frameHeight="499" />
+<SubTexture name="madsum left0000" x="1458" y="499" width="466" height="493" frameX="-4" frameY="0" frameWidth="480" frameHeight="493" />
+<SubTexture name="madsum left0001" x="0" y="1012" width="461" height="493" frameX="-10" frameY="0" frameWidth="480" frameHeight="493" />
+<SubTexture name="madsum left0002" x="461" y="1012" width="463" height="493" frameX="-17" frameY="0" frameWidth="480" frameHeight="493" />
+<SubTexture name="madsum up0000" x="0" y="0" width="491" height="512" frameX="-6" frameY="0" frameWidth="497" frameHeight="512" />
+<SubTexture name="madsum up0001" x="491" y="0" width="488" height="508" frameX="-5" frameY="-4" frameWidth="497" frameHeight="512" />
+<SubTexture name="madsum up0002" x="979" y="0" width="479" height="502" frameX="-3" frameY="-10" frameWidth="497" frameHeight="512" />
+<SubTexture name="madsum down0000" x="1930" y="862" width="395" height="423" frameX="-6" frameY="-12" frameWidth="409" frameHeight="435" />
+<SubTexture name="madsum down0002" x="1930" y="435" width="404" height="427" frameX="-2" frameY="-8" frameWidth="409" frameHeight="435" />
+<SubTexture name="madsum down0003" x="1930" y="0" width="409" height="435" frameX="0" frameY="0" frameWidth="409" frameHeight="435" />
+</TextureAtlas>

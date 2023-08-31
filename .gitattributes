@@ -5,6 +5,7 @@
 pages/** linguist-vendored
 
 # Include HScript files as Haxe
+*.hx linguist-language=Haxe
 *.hxs linguist-language=Haxe
 *.hsc linguist-language=Haxe
 *.hscript linguist-language=Haxe

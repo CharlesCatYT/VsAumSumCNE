@@ -27,7 +27,7 @@ class FunkinSave {
 		//trace(Application.current.meta.get('save-path'));
 		//trace(Application.current.meta.get('save-name'));
 		save = new FlxSave();
-		save.bind('save-default', #if sys 'YoshiCrafter29/CodenameEngine' #else 'CodenameEngine' #end);
+		save.bind('save-default', #if sys 'IsaiahMods/VsAumSum' #else 'VsAumSum' #end);
 		load();
 
 		if (!__eventAdded) {

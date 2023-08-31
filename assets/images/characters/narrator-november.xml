@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="narrator redesign.png">
+<SubTexture name="narrator redesign idle0000" x="1159" y="0" width="349" height="525" frameX="0" frameY="-10" frameWidth="349" frameHeight="535" />
+<SubTexture name="narrator redesign idle0001" x="803" y="558" width="286" height="532" frameX="-28" frameY="-3" frameWidth="349" frameHeight="535" />
+<SubTexture name="narrator redesign idle0002" x="530" y="0" width="212" height="535" frameX="-74" frameY="0" frameWidth="349" frameHeight="535" />
+<SubTexture name="narrator redesign idle0003" x="530" y="0" width="212" height="535" frameX="-74" frameY="0" frameWidth="349" frameHeight="535" />
+<SubTexture name="narrator redesign idle0004" x="530" y="0" width="212" height="535" frameX="-74" frameY="0" frameWidth="349" frameHeight="535" />
+<SubTexture name="narrator redesign idle0005" x="530" y="0" width="212" height="535" frameX="-74" frameY="0" frameWidth="349" frameHeight="535" />
+<SubTexture name="narrator redesign idle0006" x="530" y="0" width="212" height="535" frameX="-74" frameY="0" frameWidth="349" frameHeight="535" />
+<SubTexture name="narrator redesign idle0007" x="530" y="0" width="212" height="535" frameX="-74" frameY="0" frameWidth="349" frameHeight="535" />
+<SubTexture name="narrator redesign idle0008" x="530" y="0" width="212" height="535" frameX="-74" frameY="0" frameWidth="349" frameHeight="535" />
+<SubTexture name="narrator redesign idle0009" x="530" y="0" width="212" height="535" frameX="-74" frameY="0" frameWidth="349" frameHeight="535" />
+<SubTexture name="narrator redesign idle0010" x="530" y="0" width="212" height="535" frameX="-74" frameY="0" frameWidth="349" frameHeight="535" />
+<SubTexture name="narrator redesign idle0011" x="530" y="0" width="212" height="535" frameX="-74" frameY="0" frameWidth="349" frameHeight="535" />
+<SubTexture name="narrator redesign idle0012" x="530" y="0" width="212" height="535" frameX="-74" frameY="0" frameWidth="349" frameHeight="535" />
+<SubTexture name="narrator redesign idle0013" x="530" y="0" width="212" height="535" frameX="-74" frameY="0" frameWidth="349" frameHeight="535" />
+<SubTexture name="narrator redesign right0000" x="742" y="0" width="417" height="535" frameX="0" frameY="0" frameWidth="417" frameHeight="535" />
+<SubTexture name="narrator redesign right0001" x="0" y="558" width="378" height="535" frameX="-26" frameY="0" frameWidth="417" frameHeight="535" />
+<SubTexture name="narrator redesign left0000" x="378" y="558" width="209" height="533" frameX="-1" frameY="0" frameWidth="216" frameHeight="533" />
+<SubTexture name="narrator redesign left0001" x="587" y="558" width="216" height="533" frameX="0" frameY="0" frameWidth="216" frameHeight="533" />
+<SubTexture name="narrator redesign up0000" x="0" y="0" width="260" height="558" frameX="-6" frameY="0" frameWidth="270" frameHeight="558" />
+<SubTexture name="narrator redesign up0001" x="260" y="0" width="270" height="541" frameX="0" frameY="-17" frameWidth="270" frameHeight="558" />
+<SubTexture name="narrator redesign down0000" x="1508" y="0" width="424" height="490" frameX="0" frameY="-28" frameWidth="424" frameHeight="518" />
+<SubTexture name="narrator redesign down0001" x="1159" y="525" width="343" height="518" frameX="-30" frameY="0" frameWidth="424" frameHeight="518" />
+</TextureAtlas>

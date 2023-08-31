@@ -53,7 +53,7 @@ class CrashHandler {
 		e.stopPropagation();
 		e.stopImmediatePropagation();
 
-		NativeAPI.showMessageBox("Codename Engine Crash Handler", 'Uncaught Error:$m\n\n$stackLabel', MSG_ERROR);
+		NativeAPI.showMessageBox("Vs. AumSum Crash Handler", 'Uncaught Error:$m\n\n$stackLabel', MSG_ERROR);
 		#if sys
 		Sys.exit(1);
 		#end

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="godsum.png">
+<SubTexture name="godsum idle0000" x="426" y="682" width="427" height="629" frameX="0" frameY="-7" frameWidth="427" frameHeight="640" />
+<SubTexture name="godsum idle0001" x="0" y="682" width="426" height="631" frameX="-1" frameY="-5" frameWidth="427" frameHeight="640" />
+<SubTexture name="godsum idle0002" x="1250" y="0" width="419" height="633" frameX="-8" frameY="-3" frameWidth="427" frameHeight="640" />
+<SubTexture name="godsum idle0003" x="1250" y="0" width="419" height="633" frameX="-8" frameY="-3" frameWidth="427" frameHeight="640" />
+<SubTexture name="godsum idle0004" x="1250" y="0" width="419" height="633" frameX="-8" frameY="-3" frameWidth="427" frameHeight="640" />
+<SubTexture name="godsum idle0005" x="1250" y="0" width="419" height="633" frameX="-8" frameY="-3" frameWidth="427" frameHeight="640" />
+<SubTexture name="godsum idle0006" x="1250" y="0" width="419" height="633" frameX="-8" frameY="-3" frameWidth="427" frameHeight="640" />
+<SubTexture name="godsum idle0007" x="1250" y="0" width="419" height="633" frameX="-8" frameY="-3" frameWidth="427" frameHeight="640" />
+<SubTexture name="godsum idle0008" x="1250" y="0" width="419" height="633" frameX="-8" frameY="-3" frameWidth="427" frameHeight="640" />
+<SubTexture name="godsum idle0009" x="1250" y="0" width="419" height="633" frameX="-8" frameY="-3" frameWidth="427" frameHeight="640" />
+<SubTexture name="godsum right0000" x="1157" y="1921" width="588" height="556" frameX="-8" frameY="-17" frameWidth="596" frameHeight="578" />
+<SubTexture name="godsum right0001" x="570" y="1921" width="587" height="561" frameX="-9" frameY="-11" frameWidth="596" frameHeight="578" />
+<SubTexture name="godsum right0002" x="0" y="1921" width="570" height="570" frameX="-8" frameY="-1" frameWidth="596" frameHeight="578" />
+<SubTexture name="godsum left0000" x="1092" y="1313" width="661" height="601" frameX="0" frameY="-22" frameWidth="666" frameHeight="625" />
+<SubTexture name="godsum left0001" x="0" y="1313" width="652" height="608" frameX="-8" frameY="-17" frameWidth="666" frameHeight="625" />
+<SubTexture name="godsum left0002" x="853" y="682" width="644" height="614" frameX="-19" frameY="-11" frameWidth="666" frameHeight="625" />
+<SubTexture name="godsum up0000" x="839" y="0" width="411" height="676" frameX="0" frameY="-24" frameWidth="445" frameHeight="715" />
+<SubTexture name="godsum up0001" x="410" y="0" width="429" height="678" frameX="-16" frameY="-32" frameWidth="445" frameHeight="715" />
+<SubTexture name="godsum up0002" x="0" y="0" width="410" height="682" frameX="-35" frameY="-32" frameWidth="445" frameHeight="715" />
+<SubTexture name="godsum down0000" x="2100" y="0" width="434" height="598" frameX="-15" frameY="-16" frameWidth="455" frameHeight="614" />
+<SubTexture name="godsum down0001" x="652" y="1313" width="440" height="603" frameX="-15" frameY="-9" frameWidth="455" frameHeight="614" />
+<SubTexture name="godsum down0002" x="1669" y="0" width="431" height="614" frameX="-24" frameY="0" frameWidth="455" frameHeight="614" />
+</TextureAtlas>
