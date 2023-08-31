@@ -168,9 +168,11 @@
 	<haxedef name="openfl_dpi_aware" if="openfl_dpi_aware" />
 
 	<!-- _______________________________ Libraries ______________________________ -->
-
+				
 	<haxelib name="flixel" />
 	<haxelib name="flixel-addons" />
+	<haxelib name="flixel-tools" />
+	<haxelib name="flixel-ui" />
 
 	<haxelib name="hxCodec-cne" if="VIDEO_CUTSCENES" />
 	<section if="THREE_D_SUPPORT">
