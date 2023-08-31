@@ -11,6 +11,6 @@ class CodenameBuildField extends TextField {
 		defaultTextFormat = Framerate.textFormat;
 		autoSize = LEFT;
 		multiline = wordWrap = false;
-		text = 'Codename Engine Alpha\nFoxa Build';
+		text = 'Codename Engine Alpha\nVs. AumSum 2.0';
 	}
 }
