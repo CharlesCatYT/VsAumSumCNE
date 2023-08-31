@@ -101,6 +101,11 @@ class TitleState extends MusicBeatState
 		ngSpr.antialiasing = true;
 		#end
 
+		var engineVersionText:FlxText = new FlxText(5, FlxG.height - 18, 0, "FNF Vs. AumSum 2.0", 12);
+		engineversionText.scrollFactor.set();
+		engineversionText.setFormat("Funkin", 16, FlxColor.WHITE, LEFT);
+		add(engineversionText);
+
 		FlxG.mouse.visible = false;
 
 		if (initialized)
