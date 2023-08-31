@@ -193,10 +193,13 @@
 
 	<haxedef name="no-deprecation-warnings"/>
 
+	<haxedef name="HXCPP_GC_SUMMARY" if="cpp debug"/>
+	<haxedef name="HXCPP_GC_MOVING" if="cpp" />
+
 	<!-- _________________________________ Additional stuff _______________________________ -->
 
 	<section if="COMPILE_ALL_CLASSES">
-		<haxeflag name="-dce" value="no" />
+		<haxeflag name="-dce" value="std" />
 		<haxeflag name="--macro" value="funkin.backend.system.macros.ScriptsMacro.addAdditionalClasses()" />
 	</section>
 
