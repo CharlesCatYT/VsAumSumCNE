@@ -25,6 +25,10 @@ import flixel.math.FlxRect;
 import lime.app.Application;
 import funkin.backend.system.modules.*;
 
+#if linux
+import lime.graphics.Image;
+#end
+
 #if ALLOW_MULTITHREADING
 import sys.thread.Thread;
 #end
@@ -116,6 +120,11 @@ class Main extends Sprite
 		#end
 		FunkinCache.init();
 		Paths.assetsTree = new AssetsLibraryList();
+
+		#if linux
+		var icon = Image.fromFile("icon.png");
+		Lib.current.stage.window.setIcon(icon);
+		#end
 
 		#if UPDATE_CHECKING
 		funkin.backend.system.updating.UpdateUtil.init();
