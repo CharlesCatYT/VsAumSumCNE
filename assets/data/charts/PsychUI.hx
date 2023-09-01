@@ -12,12 +12,12 @@ var hudTxtTween:FlxTween;
 var ratingFC:String = "FC";
 var ratingStuff:Array<Dynamic> = [
     ['You are stupid!', 0.2], //From 0% to 19%
-    ['Told ya you're bad', 0.4], //From 20% to 39%
-    ['No, you're bad', 0.5], //From 40% to 49%
+    ['too bad', 0.4], //From 20% to 39%
+    ['YOU BLASTED FOOL', 0.5], //From 40% to 49%
     ['BRUH!', 0.6], //From 50% to 59%
     ['Eh.', 0.69], //From 60% to 68%
     ['Decent', 0.7], //69%
-    ['This is fine.', 0.8], //From 70% to 79%
+    ['your mothballs got stolen', 0.8], //From 70% to 79%
     ['Oh wow, can you believe it?', 0.9], //From 80% to 89%
     ['HOW PERFECT!', 1], //From 90% to 99%
     ['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
