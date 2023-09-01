@@ -102,9 +102,9 @@ class TitleState extends MusicBeatState
 		#end
 
 		var engineVersionText:FlxText = new FlxText(5, FlxG.height - 18, 0, "FNF Vs. AumSum 2.0", 12);
-		engineversionText.scrollFactor.set();
-		engineversionText.setFormat("Funkin", 16, FlxColor.WHITE, LEFT);
-		add(engineversionText);
+		engineVersionText.scrollFactor.set();
+		engineVersionText.setFormat("Cooper Black", 16, FlxColor.WHITE, LEFT);
+		add(engineVersionText);
 
 		FlxG.mouse.visible = false;
 
@@ -255,9 +255,9 @@ class TitleState extends MusicBeatState
 			case 9:		createCoolText([curWacky[0]]);
 			case 11:	addMoreText(curWacky[1]);
 			case 12:	deleteCoolText();
-			case 13:	addMoreText('Friday');
-			case 14:	addMoreText('Night');
-			case 15:	addMoreText('Funkin');
+			case 13:	addMoreText('FNF');
+			case 14:	addMoreText('Vs');
+			case 15:	addMoreText('AumSum');
 			case 16:	skipIntro();
 		}
 		#end
@@ -280,9 +280,9 @@ class TitleState extends MusicBeatState
 		9 => new IntroText(["{introText1}"]),
 		11 => new IntroText(["{introText1}", "{introText2}"]),
 		12 => new IntroText(),
-		13 => new IntroText(['Friday']),
-		14 => new IntroText(['Friday', 'Night']),
-		15 => new IntroText(['Friday', 'Night', "Funkin'"]),
+		13 => new IntroText(['FNF']),
+		14 => new IntroText(['FNF', 'Vs']),
+		15 => new IntroText(['FNF', 'Vs', "AumSum"]),
 	];
 
 	public function loadXML() {

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="aumsums_basics.png">
+	<!-- Created with Adobe Animate version 22.0.7.214 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="aumsum down instance 10000" x="0" y="1647" width="229" height="378" frameX="-6" frameY="-37" frameWidth="235" frameHeight="415"/>
+	<SubTexture name="aumsum down instance 10001" x="0" y="1647" width="229" height="378" frameX="-6" frameY="-37" frameWidth="235" frameHeight="415"/>
+	<SubTexture name="aumsum down instance 10002" x="216" y="1232" width="219" height="403" frameX="-6" frameY="-12" frameWidth="235" frameHeight="415"/>
+	<SubTexture name="aumsum down instance 10003" x="216" y="1232" width="219" height="403" frameX="-6" frameY="-12" frameWidth="235" frameHeight="415"/>
+	<SubTexture name="aumsum down instance 10004" x="0" y="1232" width="216" height="415" frameX="0" frameY="0" frameWidth="235" frameHeight="415"/>
+	<SubTexture name="aumsum down instance 10005" x="0" y="1232" width="216" height="415" frameX="0" frameY="0" frameWidth="235" frameHeight="415"/>
+	<SubTexture name="aumsum down instance 10006" x="0" y="1232" width="216" height="415" frameX="0" frameY="0" frameWidth="235" frameHeight="415"/>
+	<SubTexture name="aumsum down instance 10007" x="0" y="1232" width="216" height="415" frameX="0" frameY="0" frameWidth="235" frameHeight="415"/>
+	<SubTexture name="aumsum down instance 10008" x="0" y="1232" width="216" height="415" frameX="0" frameY="0" frameWidth="235" frameHeight="415"/>
+	<SubTexture name="aumsum down instance 10009" x="0" y="1232" width="216" height="415" frameX="0" frameY="0" frameWidth="235" frameHeight="415"/>
+	<SubTexture name="aumsum down instance 10010" x="0" y="1232" width="216" height="415" frameX="0" frameY="0" frameWidth="235" frameHeight="415"/>
+	<SubTexture name="aumsum down instance 10011" x="0" y="1232" width="216" height="415" frameX="0" frameY="0" frameWidth="235" frameHeight="415"/>
+	<SubTexture name="aumsum idle instance 10000" x="229" y="820" width="226" height="380" frameX="0" frameY="-36" frameWidth="226" frameHeight="416"/>
+	<SubTexture name="aumsum idle instance 10001" x="229" y="820" width="226" height="380" frameX="0" frameY="-36" frameWidth="226" frameHeight="416"/>
+	<SubTexture name="aumsum idle instance 10002" x="230" y="409" width="213" height="390" frameX="-5" frameY="-25" frameWidth="226" frameHeight="416"/>
+	<SubTexture name="aumsum idle instance 10003" x="230" y="409" width="213" height="390" frameX="-5" frameY="-25" frameWidth="226" frameHeight="416"/>
+	<SubTexture name="aumsum idle instance 10004" x="232" y="0" width="202" height="408" frameX="-9" frameY="-7" frameWidth="226" frameHeight="416"/>
+	<SubTexture name="aumsum idle instance 10005" x="232" y="0" width="202" height="408" frameX="-9" frameY="-7" frameWidth="226" frameHeight="416"/>
+	<SubTexture name="aumsum idle instance 10006" x="435" y="1200" width="196" height="414" frameX="-7" frameY="0" frameWidth="226" frameHeight="416"/>
+	<SubTexture name="aumsum idle instance 10007" x="435" y="1200" width="196" height="414" frameX="-7" frameY="0" frameWidth="226" frameHeight="416"/>
+	<SubTexture name="aumsum idle instance 10008" x="435" y="1200" width="196" height="414" frameX="-7" frameY="0" frameWidth="226" frameHeight="416"/>
+	<SubTexture name="aumsum idle instance 10009" x="435" y="1200" width="196" height="414" frameX="-7" frameY="0" frameWidth="226" frameHeight="416"/>
+	<SubTexture name="aumsum idle instance 10010" x="435" y="1200" width="196" height="414" frameX="-7" frameY="0" frameWidth="226" frameHeight="416"/>
+	<SubTexture name="aumsum idle instance 10011" x="435" y="1200" width="196" height="414" frameX="-7" frameY="0" frameWidth="226" frameHeight="416"/>
+	<SubTexture name="aumsum left instance 10000" x="0" y="0" width="232" height="409" frameX="0" frameY="-2" frameWidth="256" frameHeight="412"/>
+	<SubTexture name="aumsum left instance 10001" x="0" y="0" width="232" height="409" frameX="0" frameY="-2" frameWidth="256" frameHeight="412"/>
+	<SubTexture name="aumsum left instance 10002" x="0" y="820" width="229" height="412" frameX="-9" frameY="0" frameWidth="256" frameHeight="412"/>
+	<SubTexture name="aumsum left instance 10003" x="0" y="820" width="229" height="412" frameX="-9" frameY="0" frameWidth="256" frameHeight="412"/>
+	<SubTexture name="aumsum left instance 10004" x="0" y="409" width="230" height="411" frameX="-26" frameY="0" frameWidth="256" frameHeight="412"/>
+	<SubTexture name="aumsum left instance 10005" x="0" y="409" width="230" height="411" frameX="-26" frameY="0" frameWidth="256" frameHeight="412"/>
+	<SubTexture name="aumsum left instance 10006" x="0" y="409" width="230" height="411" frameX="-26" frameY="0" frameWidth="256" frameHeight="412"/>
+	<SubTexture name="aumsum left instance 10007" x="0" y="409" width="230" height="411" frameX="-26" frameY="0" frameWidth="256" frameHeight="412"/>
+	<SubTexture name="aumsum left instance 10008" x="0" y="409" width="230" height="411" frameX="-26" frameY="0" frameWidth="256" frameHeight="412"/>
+	<SubTexture name="aumsum left instance 10009" x="0" y="409" width="230" height="411" frameX="-26" frameY="0" frameWidth="256" frameHeight="412"/>
+	<SubTexture name="aumsum left instance 10010" x="0" y="409" width="230" height="411" frameX="-26" frameY="0" frameWidth="256" frameHeight="412"/>
+	<SubTexture name="aumsum left instance 10011" x="0" y="409" width="230" height="411" frameX="-26" frameY="0" frameWidth="256" frameHeight="412"/>
+	<SubTexture name="aumsum right instance 10000" x="229" y="1635" width="190" height="413" frameX="-3" frameY="-1" frameWidth="193" frameHeight="414"/>
+	<SubTexture name="aumsum right instance 10001" x="229" y="1635" width="190" height="413" frameX="-3" frameY="-1" frameWidth="193" frameHeight="414"/>
+	<SubTexture name="aumsum right instance 10002" x="419" y="1635" width="182" height="413" frameX="-4" frameY="-1" frameWidth="193" frameHeight="414"/>
+	<SubTexture name="aumsum right instance 10003" x="419" y="1635" width="182" height="413" frameX="-4" frameY="-1" frameWidth="193" frameHeight="414"/>
+	<SubTexture name="aumsum right instance 10004" x="601" y="1614" width="179" height="414" frameX="0" frameY="0" frameWidth="193" frameHeight="414"/>
+	<SubTexture name="aumsum right instance 10005" x="601" y="1614" width="179" height="414" frameX="0" frameY="0" frameWidth="193" frameHeight="414"/>
+	<SubTexture name="aumsum right instance 10006" x="601" y="1614" width="179" height="414" frameX="0" frameY="0" frameWidth="193" frameHeight="414"/>
+	<SubTexture name="aumsum right instance 10007" x="601" y="1614" width="179" height="414" frameX="0" frameY="0" frameWidth="193" frameHeight="414"/>
+	<SubTexture name="aumsum right instance 10008" x="601" y="1614" width="179" height="414" frameX="0" frameY="0" frameWidth="193" frameHeight="414"/>
+	<SubTexture name="aumsum right instance 10009" x="601" y="1614" width="179" height="414" frameX="0" frameY="0" frameWidth="193" frameHeight="414"/>
+	<SubTexture name="aumsum right instance 10010" x="601" y="1614" width="179" height="414" frameX="0" frameY="0" frameWidth="193" frameHeight="414"/>
+	<SubTexture name="aumsum right instance 10011" x="601" y="1614" width="179" height="414" frameX="0" frameY="0" frameWidth="193" frameHeight="414"/>
+	<SubTexture name="aumsum up instance 10000" x="455" y="439" width="170" height="475" frameX="-3" frameY="0" frameWidth="187" frameHeight="475"/>
+	<SubTexture name="aumsum up instance 10001" x="455" y="439" width="170" height="475" frameX="-3" frameY="0" frameWidth="187" frameHeight="475"/>
+	<SubTexture name="aumsum up instance 10002" x="625" y="439" width="172" height="464" frameX="-4" frameY="-9" frameWidth="187" frameHeight="475"/>
+	<SubTexture name="aumsum up instance 10003" x="625" y="439" width="172" height="464" frameX="-4" frameY="-9" frameWidth="187" frameHeight="475"/>
+	<SubTexture name="aumsum up instance 10004" x="443" y="0" width="187" height="439" frameX="0" frameY="-35" frameWidth="187" frameHeight="475"/>
+	<SubTexture name="aumsum up instance 10005" x="443" y="0" width="187" height="439" frameX="0" frameY="-35" frameWidth="187" frameHeight="475"/>
+	<SubTexture name="aumsum up instance 10006" x="443" y="0" width="187" height="439" frameX="0" frameY="-35" frameWidth="187" frameHeight="475"/>
+	<SubTexture name="aumsum up instance 10007" x="443" y="0" width="187" height="439" frameX="0" frameY="-35" frameWidth="187" frameHeight="475"/>
+	<SubTexture name="aumsum up instance 10008" x="443" y="0" width="187" height="439" frameX="0" frameY="-35" frameWidth="187" frameHeight="475"/>
+	<SubTexture name="aumsum up instance 10009" x="443" y="0" width="187" height="439" frameX="0" frameY="-35" frameWidth="187" frameHeight="475"/>
+	<SubTexture name="aumsum up instance 10010" x="443" y="0" width="187" height="439" frameX="0" frameY="-35" frameWidth="187" frameHeight="475"/>
+	<SubTexture name="aumsum up instance 10011" x="443" y="0" width="187" height="439" frameX="0" frameY="-35" frameWidth="187" frameHeight="475"/>
+</TextureAtlas>

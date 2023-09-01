@@ -50,10 +50,10 @@ class StoryMenuState extends MusicBeatState {
 		blackBar.updateHitbox();
 
 		scoreText = new FunkinText(10, 10, 0, "SCORE: -", 36);
-		scoreText.setFormat(Paths.font("vcr.ttf"), 32);
+		scoreText.setFormat(Paths.font("mvboli.ttf"), 32);
 
 		weekTitle = new FlxText(10, 10, FlxG.width - 20, "", 32);
-		weekTitle.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
+		weekTitle.setFormat(Paths.font("mvboli.ttf"), 32, FlxColor.WHITE, RIGHT);
 		weekTitle.alpha = 0.7;
 
 		weekBG = new FlxSprite(0, 56).makeSolid(FlxG.width, 400, 0xFFFFFFFF);

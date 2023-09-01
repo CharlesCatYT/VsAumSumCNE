@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Aumsum_Assets.png">
+<SubTexture name="idle0000" x="0" y="33" width="313" height="318" frameX="0" frameY="0" frameWidth="313" frameHeight="318" />
+<SubTexture name="idle0001" x="356" y="52" width="313" height="318" frameX="0" frameY="0" frameWidth="313" frameHeight="318" />
+<SubTexture name="idle0002" x="681" y="50" width="220" height="318" frameX="0" frameY="0" frameWidth="220" frameHeight="318" />
+<SubTexture name="idle0003" x="32" y="406" width="263" height="327" frameX="0" frameY="0" frameWidth="263" frameHeight="327" />
+<SubTexture name="idle0004" x="345" y="383" width="147" height="364" frameX="0" frameY="0" frameWidth="147" frameHeight="364" />
+<SubTexture name="idle0005" x="573" y="427" width="230" height="300" frameX="0" frameY="0" frameWidth="333" frameHeight="300" />
+<SubTexture name="idle0006" x="821" y="619" width="179" height="119" frameX="0" frameY="0" frameWidth="179" frameHeight="119" />
+</TextureAtlas>

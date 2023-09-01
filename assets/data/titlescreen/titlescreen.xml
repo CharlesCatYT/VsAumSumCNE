@@ -54,18 +54,18 @@
 		<text beat="12"/>
 
 		<text beat="13">
-			<line text="Friday" />
+			<line text="Its" />
 		</text>
 
 		<text beat="14">
-			<line text="Friday" />
-			<line text="Night" />
+			<line text="Its" />
+			<line text="AumSum" />
 		</text>
 
 		<text beat="15">
-			<line text="Friday" />
-			<line text="Night" />
-			<line text="Funkin'" />
+			<line text="Its" />
+			<line text="AumSum" />
+			<line text="Time'" />
 		</text>
 	</intro>
 </titlestate>

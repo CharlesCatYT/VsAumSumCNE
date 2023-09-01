@@ -17,7 +17,7 @@ class AppearanceOptions extends OptionsScreen {
 			"antialiasing"));
 		add(new Checkbox(
 			"Colored Healthbar",
-			"If unchecked, the game will use the orginal red/green health bar from the week 6 fnf game.",
+			"If unchecked, the game will use the orginal red/green health bar from Vanilla FNF.",
 			"colorHealthBar"));
 		add(new Checkbox(
 			"Pixel Perfect Effect",
@@ -25,11 +25,11 @@ class AppearanceOptions extends OptionsScreen {
 			"week6PixelPerfect"));
 		add(new Checkbox(
 			"Flashing Menu",
-			"If unchecked, will disable menu flashing when you select an option in the Main Menu, and other flashs will be slower",
+			"If unchecked, will disable menu flashing when you select an option in the Main Menu, and other flashes will be slower",
 			"flashingMenu"));
 		add(new Checkbox(
 			"Low Memory Mode",
-			"If checked, will disable certain background elements in stages to reduce memory usage.",
+			"If checked, will disable certain background elements in stages to reduce memory usage",
 			"lowMemoryMode"));
 		#if sys
 		if (!Main.forceGPUOnlyBitmapsOff) {

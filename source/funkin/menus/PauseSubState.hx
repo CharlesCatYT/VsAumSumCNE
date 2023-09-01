@@ -73,7 +73,7 @@ class PauseSubState extends MusicBeatSubstate
 
 		for(k=>label in [levelInfo, levelDifficulty, multiplayerText]) {
 			label.scrollFactor.set();
-			label.setFormat(Paths.font('vcr.ttf'), 32);
+			label.setFormat(Paths.font('mvboli.ttf'), 32);
 			label.updateHitbox();
 			label.alpha = 0;
 			label.x = FlxG.width - (label.width + 20);

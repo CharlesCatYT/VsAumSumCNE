@@ -183,7 +183,7 @@ class Main extends Sprite
 		FlxSoundTray.volumeDownChangeSFX = null;
 
 		if (FlxG.game.soundTray != null)
-			FlxG.game.soundTray.text.setTextFormat(new TextFormat(Paths.font("vcr.ttf")));
+			FlxG.game.soundTray.text.setTextFormat(new TextFormat(Paths.font("mvboli.ttf")));
 	}
 
 	public static function initTransition() {

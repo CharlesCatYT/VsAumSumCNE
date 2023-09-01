@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="AumSum_Assets.png">
+<SubTexture name="AumSum idle0000" x="0" y="0" width="330" height="598" frameX="0" frameY="0" frameWidth="330" frameHeight="598" />
+<SubTexture name="AumSum idle0001" x="0" y="0" width="330" height="598" frameX="0" frameY="0" frameWidth="330" frameHeight="598" />
+<SubTexture name="AumSum idle0002" x="0" y="0" width="330" height="598" frameX="0" frameY="0" frameWidth="330" frameHeight="598" />
+<SubTexture name="AumSum idle0003" x="330" y="0" width="330" height="598" frameX="0" frameY="0" frameWidth="330" frameHeight="598" />
+<SubTexture name="AumSum idle0004" x="330" y="0" width="330" height="598" frameX="0" frameY="0" frameWidth="330" frameHeight="598" />
+<SubTexture name="AumSum idle0005" x="660" y="0" width="330" height="598" frameX="0" frameY="0" frameWidth="330" frameHeight="598" />
+<SubTexture name="AumSum idle0006" x="990" y="0" width="330" height="598" frameX="0" frameY="0" frameWidth="330" frameHeight="598" />
+<SubTexture name="AumSum idle0007" x="990" y="0" width="330" height="598" frameX="0" frameY="0" frameWidth="330" frameHeight="598" />
+<SubTexture name="AumSum idle0008" x="990" y="0" width="330" height="598" frameX="0" frameY="0" frameWidth="330" frameHeight="598" />
+<SubTexture name="AumSum idle0009" x="990" y="0" width="330" height="598" frameX="0" frameY="0" frameWidth="330" frameHeight="598" />
+<SubTexture name="AumSum right0000" x="0" y="598" width="346" height="598" frameX="0" frameY="0" frameWidth="346" frameHeight="598" />
+<SubTexture name="AumSum right0001" x="346" y="598" width="346" height="598" frameX="0" frameY="0" frameWidth="346" frameHeight="598" />
+<SubTexture name="AumSum right0002" x="692" y="598" width="346" height="598" frameX="0" frameY="0" frameWidth="346" frameHeight="598" />
+<SubTexture name="AumSum right0003" x="1038" y="598" width="346" height="598" frameX="0" frameY="0" frameWidth="346" frameHeight="598" />
+<SubTexture name="AumSum left0000" x="0" y="1196" width="386" height="598" frameX="0" frameY="0" frameWidth="386" frameHeight="598" />
+<SubTexture name="AumSum left0001" x="386" y="1196" width="386" height="598" frameX="0" frameY="0" frameWidth="386" frameHeight="598" />
+<SubTexture name="AumSum left0002" x="772" y="1196" width="386" height="598" frameX="0" frameY="0" frameWidth="386" frameHeight="598" />
+<SubTexture name="AumSum left0003" x="1158" y="1196" width="386" height="598" frameX="0" frameY="0" frameWidth="386" frameHeight="598" />
+<SubTexture name="AumSum up0000" x="0" y="1794" width="352" height="613" frameX="0" frameY="0" frameWidth="352" frameHeight="613" />
+<SubTexture name="AumSum up0001" x="352" y="1794" width="352" height="614" frameX="0" frameY="0" frameWidth="352" frameHeight="614" />
+<SubTexture name="AumSum up0002" x="704" y="1794" width="352" height="613" frameX="0" frameY="0" frameWidth="352" frameHeight="613" />
+<SubTexture name="AumSum up0003" x="1056" y="1794" width="352" height="614" frameX="0" frameY="0" frameWidth="352" frameHeight="614" />
+<SubTexture name="AumSum down0000" x="0" y="2408" width="346" height="598" frameX="0" frameY="0" frameWidth="346" frameHeight="598" />
+<SubTexture name="AumSum down0001" x="346" y="2408" width="346" height="598" frameX="0" frameY="0" frameWidth="346" frameHeight="598" />
+<SubTexture name="AumSum down0002" x="692" y="2408" width="346" height="598" frameX="0" frameY="0" frameWidth="346" frameHeight="598" />
+<SubTexture name="AumSum down0003" x="1038" y="2408" width="346" height="598" frameX="0" frameY="0" frameWidth="346" frameHeight="598" />
+</TextureAtlas>
