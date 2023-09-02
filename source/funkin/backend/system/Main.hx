@@ -26,9 +26,12 @@ import lime.app.Application;
 import funkin.backend.system.modules.*;
 
 #if linux
+@:cppInclude('./external/gamemode_client.h')
+@:cppFileCode('
+	#define GAMEMODE_AUTO
+')
 import lime.graphics.Image;
 #end
-
 #if ALLOW_MULTITHREADING
 import sys.thread.Thread;
 #end
