@@ -19,7 +19,7 @@ latest/windows/obj/*
 latest/windows/haxe/*
 
 ## just dont wanna have this public im not a pedo i swear
-!.YourMomState.hx
+!source/funkin/dumb/YourMomState.hx
 
 # ! means a file should be added regardless of it it gets ignored prior.
 # Including to allow others to use already set-up configuration tweaked for the project.
