@@ -29,6 +29,11 @@ import funkin.menus.ui.Alphabet;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup;
 
+#if sys
+import sys.io.File;
+import sys.FileSystem;
+#end
+
 using StringTools;
 using funkin.backend.utils.CoolUtil;
 #end
