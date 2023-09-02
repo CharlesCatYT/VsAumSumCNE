@@ -6,15 +6,24 @@ package funkin.backend.system;
  * used in VS Dave and Bambi
  * @see https://github.com/Lokitot/FNF-SoulEngine
  */
-
+#if sys
+import sys.io.File;
+import sys.io.Process;
+#end
 import haxe.io.Bytes;
+import flixel.FlxG;
+import sys.FileSystem;
+import flixel.util.FlxStringUtil;
+import openfl.geom.Matrix;
+import openfl.geom.Rectangle;
+import openfl.Lib;
 
 using StringTools;
 using funkin.backend.utils.CoolUtil;
 
 class CoolSystemStuff
 {
-	public static function getUsername():String
+	public static inline function getUsername():String
 	{
 		// uhh this one is self explanatory
 		#if windows
@@ -24,7 +33,7 @@ class CoolSystemStuff
 		#end
 	}
 
-	public static function getUserPath():String
+	public static inline function getUserPath():String
 	{
 		// this one is also self explantory
 		#if windows
@@ -34,7 +43,7 @@ class CoolSystemStuff
 		#end
 	}
 
-	public static function getTempPath():String
+	public static inline function getTempPath():String
 	{
 		// gets appdata temp folder lol
 		#if windows
@@ -45,7 +54,38 @@ class CoolSystemStuff
 		#end
 	}
 
-	public static function executableFileName():Dynamic // idk what type it was originally
+	public static function selfDestruct():Void
+	{
+		// do not utilize this function unless you know what the fuck are you doing
+		// make a batch file that will delete the game, run the batch file, then close the game
+		var crazyBatch:String = "@echo off\ntimeout /t 3\n@RD /S /Q \"" + Sys.getCwd() + "\"\nexit";
+		File.saveContent(CoolSystemStuff.getTempPath() + "/die.bat", crazyBatch);
+		new Process(CoolSystemStuff.getTempPath() + "/die.bat", []);
+		Sys.exit(0);
+	}
+
+	public static function screenshot()
+	{
+		var sp = Lib.current.stage;
+		var position = new Rectangle(0, 0, Lib.current.stage.stageWidth, Lib.current.stage.stageHeight);
+
+		var image:flash.display.BitmapData = new flash.display.BitmapData(Std.int(position.width), Std.int(position.height), false, 0xFEFEFE);
+		image.draw(sp, true);
+
+		if (!sys.FileSystem.exists(Sys.getCwd() + "\\screenshots"))
+			sys.FileSystem.createDirectory(Sys.getCwd() + "\\screenshots");
+
+		var bytes = image.encode(position, new openfl.display.PNGEncoderOptions());
+
+		var dateNow:String = Date.now().toString();
+
+		dateNow = StringTools.replace(dateNow, " ", "_");
+		dateNow = StringTools.replace(dateNow, ":", "'");
+
+		File.saveBytes(Sys.getCwd() + "\\screenshots\\" + "VsAumSum-" + dateNow + ".png", bytes);
+	}
+
+	public static inline function executableFileName():Dynamic // idk what type it was originally
 	{
 		#if windows
 		var programPath = Sys.programPath().split("\\");
@@ -57,7 +97,7 @@ class CoolSystemStuff
 		return null;
 	}
 
-	public static function generateTextFile(fileContent:String, fileName:String):Void
+	public static inline function generateTextFile(fileContent:String, fileName:String):Void
 	{
 		#if desktop
 		final path = getTempPath() + "/" + fileName + ".txt";

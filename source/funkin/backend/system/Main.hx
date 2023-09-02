@@ -89,12 +89,13 @@ class Main extends Sprite
 	public static var audioDisconnected:Bool = false;
 
 	public static var changeID:Int = 0;
-	public static var pathBack = #if windows
-			"../../../../"
+	public static var pathBack =
+		#if windows
+		"../../../../"
 		#elseif mac
-			"../../../../../../../"
+		"../../../../../../../"
 		#else
-			""
+		""
 		#end;
 	public static var startedFromSource:Bool = #if TEST_BUILD true #else false #end;
 
@@ -171,6 +172,8 @@ class Main extends Sprite
 		FlxG.signals.preStateSwitch.add(onStateSwitch);
 		FlxG.signals.postStateSwitch.add(onStateSwitchPost);
 
+		Lib.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
+
 		FlxG.mouse.useSystemCursor = true;
 
 		#if MOD_SUPPORT
@@ -203,7 +206,15 @@ class Main extends Sprite
 	private static function onStateSwitch() {
 		scaleMode.resetSize();
 	}
+	
 
+	function onKeyDown(evt:KeyboardEvent){
+			if (evt.keyCode == Keyboard.F2){
+				trace('SCREENSHOT');
+				CoolSystemStuff.screenshot();
+			}
+	}
+		
 	private static function onStateSwitchPost() {
 		// manual asset clearing since base openfl one doesnt clear lime one
 		// doesnt clear bitmaps since flixel fork does it auto
