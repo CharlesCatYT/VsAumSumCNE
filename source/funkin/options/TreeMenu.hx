@@ -9,8 +9,10 @@ import funkin.options.type.TextOption;
 import flixel.util.typeLimit.OneOfTwo;
 import funkin.options.type.OptionType;
 import funkin.options.categories.*;
+import funkin.backend.MusicBeatSubstate;
 
-class TreeMenu extends UIState {
+class TreeMenu extends UIState
+{
 	public var main:OptionsScreen;
 	public var optionsTree:OptionsTree;
 	public var pathLabel:FunkinText;
@@ -19,12 +21,15 @@ class TreeMenu extends UIState {
 
 	public var lastState:Class<FlxState> = Type.getClass(FlxG.state);
 
-	public function new() {
+	public function new()
+	{
 		super();
 	}
 
-	public override function createPost() {
-		if (main == null) throw "\"main\" variable has not been set in extended class!";
+	public override function createPost()
+	{
+		if (main == null)
+			throw "\"main\" variable has not been set in extended class!";
 
 		FlxG.camera.scroll.set(-FlxG.width, 0);
 
@@ -47,55 +52,68 @@ class TreeMenu extends UIState {
 		optionsTree.treeParent = this;
 		optionsTree.add(main);
 
-
 		add(optionsTree);
 		add(pathBG);
 		add(pathLabel);
 		add(pathDesc);
 
-
 		super.createPost();
 	}
 
-	public function onMenuChange() {
-		if (optionsTree.members.length <= 0) {
+	public function onMenuChange()
+	{
+		if (optionsTree.members.length <= 0)
+		{
 			exit();
-		} else {
+		}
+		else
+		{
 			if (menuChangeTween != null)
 				menuChangeTween.cancel();
 
-			menuChangeTween = FlxTween.tween(FlxG.camera.scroll, {x: FlxG.width * Math.max(0, (optionsTree.members.length-1))}, 1.5, {ease: menuTransitionEase, onComplete: function(t) {
-				optionsTree.clearLastMenu();
-				menuChangeTween = null;
-			}});
+			menuChangeTween = FlxTween.tween(FlxG.camera.scroll, {x: FlxG.width * Math.max(0, (optionsTree.members.length - 1))}, 1.5, {
+				ease: menuTransitionEase,
+				onComplete: function(t)
+				{
+					optionsTree.clearLastMenu();
+					menuChangeTween = null;
+				}
+			});
 
 			var t = "";
-			for(o in optionsTree.members)
+			for (o in optionsTree.members)
 				t += '${o.name} > ';
 			pathLabel.text = t;
 
 			var idk:OptionsScreen = optionsTree.members.last();
-			if (idk.members.length > 0) updateDesc(idk.members[idk.curSelected].desc);
+			if (idk.members.length > 0)
+				updateDesc(idk.members[idk.curSelected].desc);
 		}
 	}
 
-	public function updateDesc(moreTxt:String = '') {
+	public function updateDesc(moreTxt:String = '')
+	{
 		pathDesc.text = optionsTree.members.last().desc;
-		if (moreTxt != null && moreTxt.length > 0) pathDesc.text += '\n' + moreTxt;
+		if (moreTxt != null && moreTxt.length > 0)
+			pathDesc.text += '\n' + moreTxt;
 		pathBG.scale.set(FlxG.width, pathDesc.y + pathDesc.height + 2);
 		pathBG.updateHitbox();
 	}
 
-	public function exit() {
+	public function exit()
+	{
 		FlxG.switchState((lastState != null) ? Type.createInstance(lastState, []) : new MainMenuState());
 	}
 
-	public function onMenuClose(m:OptionsScreen) {
+	public function onMenuClose(m:OptionsScreen)
+	{
 		CoolUtil.playMenuSFX(CANCEL);
 	}
 
 	var menuChangeTween:FlxTween;
-	public override function update(elapsed:Float) {
+
+	public override function update(elapsed:Float)
+	{
 		super.update(elapsed);
 
 		// in case path gets so long it goes offscreen
@@ -106,14 +124,16 @@ class TreeMenu extends UIState {
 		return FlxEase.quintInOut(FlxEase.cubeOut(e));
 }
 
-typedef OptionCategory = {
+typedef OptionCategory =
+{
 	var name:String;
 	var desc:String;
 	var state:OneOfTwo<OptionsScreen, Class<OptionsScreen>>;
 	var ?substate:OneOfTwo<MusicBeatSubstate, Class<MusicBeatSubstate>>;
 }
 
-typedef OptionTypeDef = {
+typedef OptionTypeDef =
+{
 	var type:Class<OptionType>;
 	var args:Array<Dynamic>;
 }
