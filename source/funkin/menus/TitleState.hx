@@ -185,7 +185,6 @@ class TitleState extends MusicBeatState
 		CoolUtil.playMenuSFX(CONFIRM, 0.7);
 
 		transitioning = true;
-		// FlxG.sound.music.stop();
 
 		new FlxTimer().start(2, (_) -> goToMainMenu());
 	}

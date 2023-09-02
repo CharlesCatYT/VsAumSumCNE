@@ -551,8 +551,6 @@ class PlayState extends MusicBeatState
 		if (SONG.stage == null || SONG.stage.trim() == "") SONG.stage = "stage";
 		add(stage = new Stage(SONG.stage));
 
-		// var camPos:FlxPoint = new FlxPoint(dadMidpoint.x, dadMidpoint.y);
-		// dadMidpoint.put();
 		var camPos:FlxPoint = new FlxPoint(0, 0);
 
 		if (!chartingMode || Options.charterEnablePlaytestScripts) {
@@ -1055,14 +1053,14 @@ class PlayState extends MusicBeatState
 		paused = true;
 
 		// 1 / 1000 chance for Gitaroo Man easter egg
-		if (FlxG.random.bool(0.1))
+		/*if (FlxG.random.bool(0.1))
 		{
 			// gitaroo man easter egg
 			FlxG.switchState(new GitarooPause());
 		}
-		else {
+		else {*/
 			openSubState(new PauseSubState());
-		}
+		//}
 
 		updateDiscordPresence();
 	}
@@ -1106,8 +1104,11 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		iconP1.scale.set(lerp(iconP1.scale.x, 1, 0.33), lerp(iconP1.scale.y, 1, 0.33));
-		iconP2.scale.set(lerp(iconP2.scale.x, 1, 0.33), lerp(iconP2.scale.y, 1, 0.33));
+		//iconP1.scale.set(lerp(iconP1.scale.x, 1, 0.33), lerp(iconP1.scale.y, 1, 0.33));
+		//iconP2.scale.set(lerp(iconP2.scale.x, 1, 0.33), lerp(iconP2.scale.y, 1, 0.33));
+
+		iconP1.centerOffsets();
+		iconP2.centerOffsets();
 
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
@@ -1130,9 +1131,12 @@ class PlayState extends MusicBeatState
 				if (Conductor.songPosition >= 0)
 					startSong();
 			}
-		} else {
+		}
+		else
+		{
 			__vocalOffsetViolation = Math.max(0, __vocalOffsetViolation + (FlxG.sound.music.time != vocals.time ? elapsed : -elapsed / 2));
-			if (__vocalOffsetViolation > 25) {
+			if (__vocalOffsetViolation > 25)
+			{
 				resyncVocals();
 				__vocalOffsetViolation = 0;
 			}
@@ -1620,11 +1624,28 @@ class PlayState extends MusicBeatState
 			camHUD.zoom += 0.03 * camZoomingStrength;
 		}
 
-		iconP1.scale.set(1.2, 1.2);
-		iconP2.scale.set(1.2, 1.2);
+		if (curBeat % gfSpeed == 0)
+		{
+			curBeat % (gfSpeed * 2) == 0 ? {
+				iconP1.scale.set(1.1, 0.8);
+				iconP2.scale.set(1.1, 1.3);
 
-		iconP1.updateHitbox();
-		iconP2.updateHitbox();
+				FlxTween.angle(iconP1, -15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
+				FlxTween.angle(iconP2, 15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
+			} : {
+				iconP1.scale.set(1.1, 1.3);
+				iconP2.scale.set(1.1, 0.8);
+
+				FlxTween.angle(iconP2, -15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
+				FlxTween.angle(iconP1, 15, 0, Conductor.crochet / 1300 * gfSpeed, {ease: FlxEase.quadOut});
+				}
+
+			FlxTween.tween(iconP1, {'scale.x': 1, 'scale.y': 1}, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
+			FlxTween.tween(iconP2, {'scale.x': 1, 'scale.y': 1}, Conductor.crochet / 1250 * gfSpeed, {ease: FlxEase.quadOut});
+
+			iconP1.updateHitbox();
+			iconP2.updateHitbox();
+		}
 
 		scripts.call("beatHit", [curBeat]);
 	}

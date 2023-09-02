@@ -39,6 +39,12 @@ class CreditsMain extends TreeMenu {
 		selectables.push(new TextOption("Friday Night Funkin'", "Select this to open the itch.io page of the original game to donate!", function() {
 			CoolUtil.openURL("https://ninja-muffin24.itch.io/funkin");
 		}));
+		selectables.push(new TextOption("FNF Vs. AumSum Discord", "Select this to join the official Discord server for the mod!", function() {
+			CoolUtil.openURL("https://discord.gg/BDVtSaNzKC");
+		}));
+		selectables.push(new TextOption("The Digital Hourglass", "Select this to join some of our fellow supporters!", function() {
+			CoolUtil.openURL("https://discord.gg/A8as7UfzDX");
+		}));
 
 		main = new OptionsScreen('Credits', 'The people who made this possible!', selectables);
 		super.create();

@@ -3,6 +3,7 @@ import haxe.*;
 import flixel.*;
 import openfl.*;
 import lime.*;
+import hscript.*;
 
 import funkin.backend.assets.Paths;
 import funkin.backend.MusicBeatState;
