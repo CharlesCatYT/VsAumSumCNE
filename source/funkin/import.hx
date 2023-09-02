@@ -32,7 +32,10 @@ import flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup;
 #if sys
 import sys.io.File;
 import sys.FileSystem;
+import sys.io.Process;
 #end
+
+import funkin.backend.system.CoolSystemStuff;
 
 using StringTools;
 using funkin.backend.utils.CoolUtil;
