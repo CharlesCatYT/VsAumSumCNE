@@ -9,7 +9,8 @@ import flixel.text.FlxText;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.tweens.FlxTween;
 
-class UpdateAvailableScreen extends MusicBeatState {
+class UpdateAvailableScreen extends MusicBeatState
+{
 	public var bg:FlxSprite;
 
 	public var versionCheckBG:FlxSprite;
@@ -24,12 +25,14 @@ class UpdateAvailableScreen extends MusicBeatState {
 
 	public var installSelected:Bool = true;
 
-	public function new(check:UpdateCheckCallback) {
+	public function new(check:UpdateCheckCallback)
+	{
 		super();
 		this.check = check;
 	}
 
-	public override function create() {
+	public override function create()
+	{
 		super.create();
 		MusicBeatState.skipTransIn = true;
 		FlxG.mouse.visible = true;
@@ -97,21 +100,27 @@ class UpdateAvailableScreen extends MusicBeatState {
 	var destY:Float = 0;
 	var oldPos:FlxPoint;
 
-	public override function update(elapsed:Float) {
+	public override function update(elapsed:Float)
+	{
 		super.update(elapsed);
 
-		destY = FlxMath.bound(destY - (FlxG.mouse.wheel * 75), 0, Math.max(0, changeLogText.height - FlxG.height + versionCheckBG.height + 20 + optionsBG.height));
-		FlxG.camera.scroll.y = lerp(FlxG.camera.scroll.y, destY, 1/3);
+		destY = FlxMath.bound(destY - (FlxG.mouse.wheel * 75), 0,
+			Math.max(0, changeLogText.height - FlxG.height + versionCheckBG.height + 20 + optionsBG.height));
+		FlxG.camera.scroll.y = lerp(FlxG.camera.scroll.y, destY, 1 / 3);
 
-		if (controls.LEFT_P || controls.RIGHT_P) {
+		if (controls.LEFT_P || controls.RIGHT_P)
+		{
 			installSelected = !installSelected;
 			changeSelection();
 		}
 
 		var newPos = FlxG.mouse.getScreenPosition();
-		if (oldPos.x != newPos.x || oldPos.y != newPos.y) {
-			if (newPos.y >= optionsBG.y) {
-				if (installSelected != (installSelected = (newPos.x < (FlxG.width / 2)))) {
+		if (oldPos.x != newPos.x || oldPos.y != newPos.y)
+		{
+			if (newPos.y >= optionsBG.y)
+			{
+				if (installSelected != (installSelected = (newPos.x < (FlxG.width / 2))))
+				{
 					changeSelection();
 				}
 			}
@@ -122,29 +131,37 @@ class UpdateAvailableScreen extends MusicBeatState {
 			select();
 	}
 
-	public function select() {
-		if (installSelected) {
+	public function select()
+	{
+		if (installSelected)
+		{
 			CoolUtil.playMenuSFX(CONFIRM);
 			FlxG.switchState(new UpdateScreen(check));
-		} else {
+		}
+		else
+		{
 			CoolUtil.playMenuSFX(CANCEL);
 			FlxG.switchState(new MainMenuState());
 		}
 	}
 
-
-	public function changeSelection() {
+	public function changeSelection()
+	{
 		CoolUtil.playMenuSFX(SCROLL, 0.7);
-		if (installSelected) {
+		if (installSelected)
+		{
 			installButton.text = "> INSTALL <";
 			skipButton.text = "SKIP";
-		} else {
+		}
+		else
+		{
 			installButton.text = "INSTALL";
 			skipButton.text = "> SKIP <";
 		}
 	}
 
-	public override function destroy() {
+	public override function destroy()
+	{
 		super.destroy();
 		FlxG.mouse.visible = false;
 		oldPos.put();

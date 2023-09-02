@@ -3,7 +3,7 @@ package funkin.options;
 import funkin.backend.system.Controls;
 import flixel.util.FlxSignal;
 
-class  PlayerSettings
+class PlayerSettings
 {
 	static public var numPlayers(default, null) = 0;
 	static public var numAvatars(default, null) = 0;
@@ -37,7 +37,7 @@ class  PlayerSettings
 	{
 		controls.setKeyboardScheme(scheme);
 	}
-	
+
 	static public function init():Void
 	{
 		if (solo == null)

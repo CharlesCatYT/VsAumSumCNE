@@ -12,7 +12,8 @@ import funkin.backend.FunkinText;
 import haxe.xml.Access;
 import flixel.text.FlxText;
 
-class StoryMenuState extends MusicBeatState {
+class StoryMenuState extends MusicBeatState
+{
 	public var characters:Map<String, MenuCharacter> = [];
 	public var weeks:Array<WeekData> = [];
 
@@ -39,7 +40,8 @@ class StoryMenuState extends MusicBeatState {
 
 	public var charFrames:Map<String, FlxFramesCollection> = [];
 
-	public override function create() {
+	public override function create()
+	{
 		super.create();
 		loadXMLs();
 		persistentUpdate = persistentDraw = true;
@@ -68,7 +70,8 @@ class StoryMenuState extends MusicBeatState {
 
 		leftArrow = new FlxSprite((FlxG.width + 400) / 2, weekBG.y + weekBG.height + 10 + 10);
 		rightArrow = new FlxSprite(FlxG.width - 10, weekBG.y + weekBG.height + 10 + 10);
-		for(k=>arrow in [leftArrow, rightArrow]) {
+		for (k => arrow in [leftArrow, rightArrow])
+		{
 			var dir = directions[k];
 
 			arrow.frames = assets;
@@ -84,24 +87,29 @@ class StoryMenuState extends MusicBeatState {
 		tracklist.color = 0xFFE55777;
 
 		add(weekSprites);
-		for(e in [blackBar, scoreText, weekTitle, weekBG, tracklist]) {
+		for (e in [blackBar, scoreText, weekTitle, weekBG, tracklist])
+		{
 			e.scrollFactor.set();
 			add(e);
 		}
 
 		characterSprites = new FlxTypedGroup<MenuCharacterSprite>();
-		for(i in 0...3) {
+		for (i in 0...3)
+		{
 			characterSprites.add(new MenuCharacterSprite(i));
 		}
 		add(characterSprites);
 
-		for(i=>week in weeks) {
+		for (i => week in weeks)
+		{
 			var spr:MenuItem = new MenuItem(0, (i * 120) + 480, 'menus/storymenu/weeks/${week.sprite}');
 			weekSprites.add(spr);
 
-			for(e in week.difficulties) {
+			for (e in week.difficulties)
+			{
 				var le = e.toLowerCase();
-				if (difficultySprites[le] == null) {
+				if (difficultySprites[le] == null)
+				{
 					var diffSprite = new FlxSprite(leftArrow.x + leftArrow.width, leftArrow.y);
 					diffSprite.loadAnimatedGraphic(Paths.image('menus/storymenu/difficulties/${le}'));
 					diffSprite.setUnstretchedGraphicSize(Std.int(rightArrow.x - leftArrow.x - leftArrow.width), Std.int(leftArrow.height), false, 1);
@@ -121,17 +129,23 @@ class StoryMenuState extends MusicBeatState {
 	}
 
 	var __lastDifficultyTween:FlxTween;
-	public override function update(elapsed:Float) {
+
+	public override function update(elapsed:Float)
+	{
 		super.update(elapsed);
 
 		lerpScore = lerp(lerpScore, intendedScore, 0.5);
 		scoreText.text = 'WEEK SCORE:${Math.round(lerpScore)}';
 
-		if (canSelect) {
-			if (leftArrow != null && leftArrow.exists) leftArrow.animation.play(controls.LEFT ? 'press' : 'idle');
-			if (rightArrow != null && rightArrow.exists) rightArrow.animation.play(controls.RIGHT ? 'press' : 'idle');
+		if (canSelect)
+		{
+			if (leftArrow != null && leftArrow.exists)
+				leftArrow.animation.play(controls.LEFT ? 'press' : 'idle');
+			if (rightArrow != null && rightArrow.exists)
+				rightArrow.animation.play(controls.RIGHT ? 'press' : 'idle');
 
-			if (controls.BACK) {
+			if (controls.BACK)
+			{
 				goBack();
 			}
 
@@ -140,34 +154,42 @@ class StoryMenuState extends MusicBeatState {
 
 			if (controls.ACCEPT)
 				selectWeek();
-		} else {
-			for(e in [leftArrow, rightArrow])
+		}
+		else
+		{
+			for (e in [leftArrow, rightArrow])
 				if (e != null && e.exists)
 					e.animation.play('idle');
 		}
 	}
 
-	public function goBack() {
+	public function goBack()
+	{
 		var event = event("onGoBack", new CancellableEvent());
 		if (!event.cancelled)
 			FlxG.switchState(new MainMenuState());
 	}
 
-	public function changeWeek(change:Int, force:Bool = false) {
-		if (change == 0 && !force) return;
+	public function changeWeek(change:Int, force:Bool = false)
+	{
+		if (change == 0 && !force)
+			return;
 
-		var event = event("onChangeWeek", EventManager.get(MenuChangeEvent).recycle(curWeek, FlxMath.wrap(curWeek + change, 0, weeks.length-1), change));
-		if (event.cancelled) return;
+		var event = event("onChangeWeek", EventManager.get(MenuChangeEvent).recycle(curWeek, FlxMath.wrap(curWeek + change, 0, weeks.length - 1), change));
+		if (event.cancelled)
+			return;
 		curWeek = event.value;
 
-		if (!force) CoolUtil.playMenuSFX();
-		for(k=>e in weekSprites.members) {
+		if (!force)
+			CoolUtil.playMenuSFX();
+		for (k => e in weekSprites.members)
+		{
 			e.targetY = k - curWeek;
 		}
-		tracklist.text = 'TRACKS\n\n${[for(e in weeks[curWeek].songs) if (!e.hide) e.name.toUpperCase()].join('\n')}';
+		tracklist.text = 'TRACKS\n\n${[for (e in weeks[curWeek].songs) if (!e.hide) e.name.toUpperCase()].join('\n')}';
 		weekTitle.text = weeks[curWeek].name.getDefault("");
 
-		for(i in 0...3)
+		for (i in 0...3)
 			characterSprites.members[i].changeCharacter(characters[weeks[curWeek].chars[i]]);
 
 		changeDifficulty(0, true);
@@ -176,18 +198,26 @@ class StoryMenuState extends MusicBeatState {
 	}
 
 	var __oldDiffName = null;
-	public function changeDifficulty(change:Int, force:Bool = false) {
-		if (change == 0 && !force) return;
 
-		var event = event("onChangeDifficulty", EventManager.get(MenuChangeEvent).recycle(curDifficulty, FlxMath.wrap(curDifficulty + change, 0, weeks[curWeek].difficulties.length-1), change));
-		if (event.cancelled) return;
+	public function changeDifficulty(change:Int, force:Bool = false)
+	{
+		if (change == 0 && !force)
+			return;
+
+		var event = event("onChangeDifficulty",
+			EventManager.get(MenuChangeEvent).recycle(curDifficulty, FlxMath.wrap(curDifficulty + change, 0, weeks[curWeek].difficulties.length - 1), change));
+		if (event.cancelled)
+			return;
 		curDifficulty = event.value;
 
-		if (__oldDiffName != (__oldDiffName = weeks[curWeek].difficulties[curDifficulty].toLowerCase())) {
-			for(e in difficultySprites) e.visible = false;
+		if (__oldDiffName != (__oldDiffName = weeks[curWeek].difficulties[curDifficulty].toLowerCase()))
+		{
+			for (e in difficultySprites)
+				e.visible = false;
 
 			var diffSprite = difficultySprites[__oldDiffName];
-			if (diffSprite != null) {
+			if (diffSprite != null)
+			{
 				diffSprite.visible = true;
 
 				if (__lastDifficultyTween != null)
@@ -202,23 +232,30 @@ class StoryMenuState extends MusicBeatState {
 		intendedScore = FunkinSave.getWeekHighscore(weeks[curWeek].name, weeks[curWeek].difficulties[curDifficulty]).score;
 	}
 
-	public function loadXMLs() {
+	public function loadXMLs()
+	{
 		// CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
 		var weeks:Array<String> = [];
 		if (getWeeksFromSource(weeks, MODS))
 			getWeeksFromSource(weeks, SOURCE);
 
-		for(k=>weekName in weeks) {
+		for (k => weekName in weeks)
+		{
 			var week:Access = null;
-			try {
+			try
+			{
 				week = new Access(Xml.parse(Assets.getText(Paths.xml('weeks/weeks/$weekName'))).firstElement());
-			} catch(e) {
+			}
+			catch (e)
+			{
 				Logs.trace('Cannot parse week "$weekName.xml": ${Std.string(e)}`', ERROR);
 			}
 
-			if (week == null) continue;
+			if (week == null)
+				continue;
 
-			if (!week.has.name) {
+			if (!week.has.name)
+			{
 				Logs.trace('Story Menu: Week at index ${k} has no name. Skipping...', WARNING);
 				continue;
 			}
@@ -232,29 +269,39 @@ class StoryMenuState extends MusicBeatState {
 			};
 
 			var diffNodes = week.nodes.difficulty;
-			if (diffNodes.length > 0) {
+			if (diffNodes.length > 0)
+			{
 				var diffs:Array<String> = [];
-				for(e in diffNodes) {
-					if (e.has.name) diffs.push(e.att.name);
+				for (e in diffNodes)
+				{
+					if (e.has.name)
+						diffs.push(e.att.name);
 				}
 				if (diffs.length > 0)
 					weekObj.difficulties = diffs;
 			}
 
-			if (week.has.chars) {
-				for(k=>e in week.att.chars.split(",")) {
+			if (week.has.chars)
+			{
+				for (k => e in week.att.chars.split(","))
+				{
 					if (e.trim() == "" || e == "none" || e == "null")
 						weekObj.chars[k] = null;
-					else {
+					else
+					{
 						addCharacter(weekObj.chars[k] = e.trim());
 					}
 				}
 			}
-			for(k2=>song in week.nodes.song) {
-				if (song == null) continue;
-				try {
+			for (k2 => song in week.nodes.song)
+			{
+				if (song == null)
+					continue;
+				try
+				{
 					var name = song.innerData.trim();
-					if (name == "") {
+					if (name == "")
+					{
 						Logs.trace('Story Menu: Song at index ${k2} in week ${weekObj.name} has no name. Skipping...', WARNING);
 						continue;
 					}
@@ -262,12 +309,15 @@ class StoryMenuState extends MusicBeatState {
 						name: name,
 						hide: song.getAtt('hide').getDefault('false') == "true"
 					});
-				} catch(e) {
+				}
+				catch (e)
+				{
 					Logs.trace('Story Menu: Song at index ${k2} in week ${weekObj.name} cannot contain any other XML nodes in its name.', WARNING);
 					continue;
 				}
 			}
-			if (weekObj.songs.length <= 0) {
+			if (weekObj.songs.length <= 0)
+			{
 				Logs.trace('Story Menu: Week ${weekObj.name} has no songs. Skipping...', WARNING);
 				continue;
 			}
@@ -275,62 +325,75 @@ class StoryMenuState extends MusicBeatState {
 		}
 	}
 
-	public function addCharacter(charName:String) {
-		
+	public function addCharacter(charName:String)
+	{
 		var char:Access = null;
-		try {
+		try
+		{
 			char = new Access(Xml.parse(Assets.getText(Paths.xml('weeks/characters/$charName'))).firstElement());
-		} catch(e) {
+		}
+		catch (e)
+		{
 			Logs.trace('Story Menu: Cannot parse character "$charName.xml": ${Std.string(e)}`', ERROR);
 		}
-		if (char == null) return;
+		if (char == null)
+			return;
 
-		if (characters[charName] != null) return;
+		if (characters[charName] != null)
+			return;
 		var charObj:MenuCharacter = {
 			spritePath: Paths.image(char.getAtt('sprite').getDefault('menus/storymenu/characters/${charName}')),
 			scale: Std.parseFloat(char.getAtt('scale')).getDefault(1),
 			xml: char,
-			offset: FlxPoint.get(
-				Std.parseFloat(char.getAtt('x')).getDefault(0),
-				Std.parseFloat(char.getAtt('y')).getDefault(0)
-			)
+			offset: FlxPoint.get(Std.parseFloat(char.getAtt('x')).getDefault(0), Std.parseFloat(char.getAtt('y')).getDefault(0))
 		};
 		characters[charName] = charObj;
 	}
 
-	public function getWeeksFromSource(weeks:Array<String>, source:funkin.backend.assets.AssetsLibraryList.AssetSource) {
+	public function getWeeksFromSource(weeks:Array<String>, source:funkin.backend.assets.AssetsLibraryList.AssetSource)
+	{
 		var path:String = Paths.txt('freeplaySonglist');
 		var weeksFound:Array<String> = [];
-		if (Paths.assetsTree.existsSpecific(path, "TEXT", source)) {
+		if (Paths.assetsTree.existsSpecific(path, "TEXT", source))
+		{
 			var trim = "";
 			weeksFound = CoolUtil.coolTextFile(Paths.txt('weeks/weeks'));
-		} else {
-			weeksFound = [for(c in Paths.getFolderContent('data/weeks/weeks/', false, source)) if (Path.extension(c).toLowerCase() == "xml") Path.withoutExtension(c)];
 		}
-		
-		if (weeksFound.length > 0) {
-			for(s in weeksFound)
+		else
+		{
+			weeksFound = [
+				for (c in Paths.getFolderContent('data/weeks/weeks/', false, source)) if (Path.extension(c).toLowerCase() == "xml") Path.withoutExtension(c)
+			];
+		}
+
+		if (weeksFound.length > 0)
+		{
+			for (s in weeksFound)
 				weeks.push(s);
 			return false;
 		}
 		return true;
 	}
 
-	public override function destroy() {
+	public override function destroy()
+	{
 		super.destroy();
-		for(e in characters)
+		for (e in characters)
 			if (e != null && e.offset != null)
 				e.offset.put();
 	}
 
-	public function selectWeek() {
-		var event = event("onWeekSelect", EventManager.get(WeekSelectEvent).recycle(weeks[curWeek], weeks[curWeek].difficulties[curDifficulty], curWeek, curDifficulty));
-		if (event.cancelled) return;
+	public function selectWeek()
+	{
+		var event = event("onWeekSelect",
+			EventManager.get(WeekSelectEvent).recycle(weeks[curWeek], weeks[curWeek].difficulties[curDifficulty], curWeek, curDifficulty));
+		if (event.cancelled)
+			return;
 
 		canSelect = false;
 		CoolUtil.playMenuSFX(CONFIRM);
 
-		for(char in characterSprites)
+		for (char in characterSprites)
 			if (char.animation.exists("confirm"))
 				char.animation.play("confirm");
 
@@ -344,7 +407,8 @@ class StoryMenuState extends MusicBeatState {
 	}
 }
 
-typedef WeekData = {
+typedef WeekData =
+{
 	var name:String;
 	var id:String;
 	var sprite:String;
@@ -353,12 +417,14 @@ typedef WeekData = {
 	var difficulties:Array<String>;
 }
 
-typedef WeekSong = {
+typedef WeekSong =
+{
 	var name:String;
 	var hide:Bool;
 }
 
-typedef MenuCharacter = {
+typedef MenuCharacter =
+{
 	var spritePath:String;
 	var xml:Access;
 	var scale:Float;
@@ -372,7 +438,8 @@ class MenuCharacterSprite extends FlxSprite
 
 	var pos:Int;
 
-	public function new(pos:Int) {
+	public function new(pos:Int)
+	{
 		super(0, 70);
 		this.pos = pos;
 		visible = false;
@@ -381,14 +448,17 @@ class MenuCharacterSprite extends FlxSprite
 
 	public var oldChar:MenuCharacter = null;
 
-	public function changeCharacter(data:MenuCharacter) {
+	public function changeCharacter(data:MenuCharacter)
+	{
 		visible = (data != null);
 		if (!visible)
 			return;
 
-		if (oldChar != (oldChar = data)) {
+		if (oldChar != (oldChar = data))
+		{
 			CoolUtil.loadAnimatedGraphic(this, data.spritePath);
-			for(e in data.xml.nodes.anim) {
+			for (e in data.xml.nodes.anim)
+			{
 				if (e.getAtt("name") == "idle")
 					animation.remove("idle");
 
@@ -404,6 +474,7 @@ class MenuCharacterSprite extends FlxSprite
 		}
 	}
 }
+
 class MenuItem extends FlxSprite
 {
 	public var targetY:Float = 0;
@@ -428,7 +499,6 @@ class MenuItem extends FlxSprite
 	// so it runs basically every so many seconds, not dependant on framerate??
 	// I'm still learning how math works thanks whoever is reading this lol
 	// var fakeFramerate:Int = Math.round((1 / FlxG.elapsed) / 10);
-
 	// hi ninja muffin
 	// i have found a more efficient way
 	// dw, judging by how week 7 looked you prob know how to do maths

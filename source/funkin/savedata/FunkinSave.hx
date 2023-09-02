@@ -10,9 +10,9 @@ import flixel.util.FlxSave;
  * The macro will automatically generate the `flush` and `load` functions.
  */
 @:build(funkin.backend.system.macros.FunkinSaveMacro.build("save", "flush", "load"))
-class FunkinSave {
+class FunkinSave
+{
 	public static var highscores:Map<HighscoreEntry, SongScore> = [];
-
 
 	/**
 	 * ONLY OPEN IF YOU WANT TO EDIT FUNCTIONS RELATED TO SAVING, LOADING OR HIGHSCORES.
@@ -23,15 +23,16 @@ class FunkinSave {
 	@:doNotSave
 	public static var save:FlxSave;
 
-	public static function init() {
-		//trace(Application.current.meta.get('save-path'));
-		//trace(Application.current.meta.get('save-name'));
+	public static function init()
+	{
 		save = new FlxSave();
 		save.bind('save-default', #if sys 'IsaiahMods/VsAumSum' #else 'VsAumSum' #end);
 		load();
 
-		if (!__eventAdded) {
-			Lib.application.onExit.add(function(i:Int) {
+		if (!__eventAdded)
+		{
+			Lib.application.onExit.add(function(i:Int)
+			{
 				trace("Saving savedata...");
 				flush();
 			});
@@ -45,14 +46,19 @@ class FunkinSave {
 	 * @param diff Song difficulty
 	 * @param changes Changes made to that song in freeplay.
 	 */
-	public static inline function getSongHighscore(name:String, diff:String, ?changes:Array<HighscoreChange>) {
-		if (changes == null) changes = [];
+	public static inline function getSongHighscore(name:String, diff:String, ?changes:Array<HighscoreChange>)
+	{
+		if (changes == null)
+			changes = [];
 		return safeGetHighscore(HSongEntry(name.toLowerCase(), diff.toLowerCase(), changes));
 	}
 
-	public static inline function setSongHighscore(name:String, diff:String, highscore:SongScore, ?changes:Array<HighscoreChange>) {
-		if (changes == null) changes = [];
-		if (safeRegisterHighscore(HSongEntry(name.toLowerCase(), diff.toLowerCase(), changes), highscore)) {
+	public static inline function setSongHighscore(name:String, diff:String, highscore:SongScore, ?changes:Array<HighscoreChange>)
+	{
+		if (changes == null)
+			changes = [];
+		if (safeRegisterHighscore(HSongEntry(name.toLowerCase(), diff.toLowerCase(), changes), highscore))
+		{
 			flush();
 			return true;
 		}
@@ -62,16 +68,20 @@ class FunkinSave {
 	public static inline function getWeekHighscore(name:String, diff:String)
 		return safeGetHighscore(HWeekEntry(name.toLowerCase(), diff.toLowerCase()));
 
-	public static inline function setWeekHighscore(name:String, diff:String, highscore:SongScore) {
-		if (safeRegisterHighscore(HWeekEntry(name.toLowerCase(), diff.toLowerCase()), highscore)) {
+	public static inline function setWeekHighscore(name:String, diff:String, highscore:SongScore)
+	{
+		if (safeRegisterHighscore(HWeekEntry(name.toLowerCase(), diff.toLowerCase()), highscore))
+		{
 			flush();
 			return true;
 		}
 		return false;
 	}
 
-	private static function safeGetHighscore(entry:HighscoreEntry):SongScore {
-		if (!highscores.exists(entry)) {
+	private static function safeGetHighscore(entry:HighscoreEntry):SongScore
+	{
+		if (!highscores.exists(entry))
+		{
 			return {
 				score: 0,
 				accuracy: 0,
@@ -83,9 +93,11 @@ class FunkinSave {
 		return highscores.get(entry);
 	}
 
-	private static function safeRegisterHighscore(entry:HighscoreEntry, highscore:SongScore) {
+	private static function safeRegisterHighscore(entry:HighscoreEntry, highscore:SongScore)
+	{
 		var oldHigh = safeGetHighscore(entry);
-		if (oldHigh.date == null || oldHigh.score < highscore.score) {
+		if (oldHigh.date == null || oldHigh.score < highscore.score)
+		{
 			highscores.set(entry, highscore);
 			return true;
 		}
@@ -94,17 +106,20 @@ class FunkinSave {
 	#end
 }
 
-enum HighscoreEntry {
+enum HighscoreEntry
+{
 	HWeekEntry(weekName:String, difficulty:String);
 	HSongEntry(songName:String, difficulty:String, changes:Array<HighscoreChange>);
 }
 
-enum HighscoreChange {
+enum HighscoreChange
+{
 	CCoopMode;
 	COpponentMode;
 }
 
-typedef SongScore = {
+typedef SongScore =
+{
 	var score:Int;
 	var accuracy:Float;
 	var misses:Int;

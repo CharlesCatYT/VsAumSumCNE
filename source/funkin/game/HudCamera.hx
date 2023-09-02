@@ -1,6 +1,5 @@
 package funkin.game;
 
-
 import lime.app.Application;
 import flixel.graphics.tile.FlxGraphicsShader;
 import openfl.display.Bitmap;
@@ -27,27 +26,19 @@ import openfl.filters.BitmapFilter;
 import openfl.filters.ShaderFilter;
 import openfl.Vector;
 
-class HudCamera extends FlxCamera {
+class HudCamera extends FlxCamera
+{
 	public var downscroll:Bool = false;
-	public override function update(elapsed:Float) {
+
+	public override function update(elapsed:Float)
+	{
 		super.update(elapsed);
-		// flipY = downscroll;
 	}
 
-
-	// public override function drawPixels(?frame:FlxFrame, ?pixels:BitmapData, matrix:FlxMatrix, ?transform:ColorTransform, ?blend:BlendMode, ?smoothing:Bool = false,
-	// 	?shader:FlxShader):Void
-	// {
-	// 	if (downscroll) {
-	// 		matrix.scale(1, -1);
-	// 		matrix.translate(0, height);
-	// 	}
-	// 	super.drawPixels(frame, pixels, matrix, transform, blend, smoothing, shader);
-	// }
-
-
-	public override function alterScreenPosition(spr:FlxObject, pos:FlxPoint) {
-		if (downscroll) {
+	public override function alterScreenPosition(spr:FlxObject, pos:FlxPoint)
+	{
+		if (downscroll)
+		{
 			var oldPoint = FlxPoint.get(pos.x, pos.y);
 			pos.set(pos.x, height - pos.y - spr.height);
 
