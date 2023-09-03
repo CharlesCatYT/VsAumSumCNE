@@ -7,6 +7,7 @@ import openfl.utils.AssetCache;
 import openfl.text.TextFormat;
 import flixel.system.ui.FlxSoundTray;
 import funkin.backend.utils.NativeAPI;
+import openfl.events.KeyboardEvent;
 import funkin.menus.BetaWarningState;
 import funkin.menus.TitleState;
 import flixel.FlxGame;
