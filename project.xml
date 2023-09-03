@@ -192,8 +192,9 @@
 
 	<haxedef name="no-deprecation-warnings"/>
 
-	<haxedef name="HXCPP_GC_SUMMARY" if="cpp debug"/>
+	<haxedef name="HXCPP_GC_SUMMARY" if="cpp"/>
 	<haxedef name="HXCPP_GC_MOVING" if="cpp" />
+        <haxedef name="HXCPP_GC_GENERATIONAL" if="cpp" />
 
 	<!-- This is from Hope Engine, go check out the engine its underrated as hell. -->
 	<error value="haxe ${haxe} is not supported why dont you switch to 4.2.5" if="${haxe == 4.1.5}" />
