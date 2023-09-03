@@ -1,7 +1,7 @@
 package funkin;
 
-typedef GameDimensions
+class GameDimensions
 {
-	var width:Int = 1280;
-	var height:Int = 720;
+	public var width:Int = 1280;
+	public var height:Int = 720;
 }

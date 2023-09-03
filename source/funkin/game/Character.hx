@@ -267,7 +267,6 @@ class Character extends FunkinSprite implements IBeatReceiver implements IOffset
 
 	public override function stepHit(curStep:Int) {
 		script.call("stepHit", [curStep]);
-		// nothing
 	}
 
 	var __reverseDrawProcedure:Bool = false;
@@ -380,7 +379,8 @@ class Character extends FunkinSprite implements IBeatReceiver implements IOffset
 	/**
 	 * When using trails on characters you should do `trail.afterCache = char.afterTrailCache;`
 	 **/
-	dynamic function afterTrailCache() {
+	dynamic function afterTrailCache()
+	{
 		if (__reverseTrailProcedure)
 		{
 			flipX = !flipX;

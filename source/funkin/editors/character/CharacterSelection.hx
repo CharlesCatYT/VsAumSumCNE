@@ -27,7 +27,7 @@ class CharacterSelection extends EditorTreeMenu
 		];
 
 		list.insert(0, new NewOption("New Character", "New Character", function() {
-			openSubState(new UIWarningSubstate("New Character", "This feature isnt implemented yet", [
+			openSubState(new UIWarningSubstate("New Character", "Why don't you just clone another character's XML (i.e. dad.xml) and base your character off of it?", [
 				{
 					label: "OK",
 					onClick: function(t) {
