@@ -173,7 +173,7 @@ class Main extends Sprite
 		FlxG.signals.preStateSwitch.add(onStateSwitch);
 		FlxG.signals.postStateSwitch.add(onStateSwitchPost);
 
-		Lib.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
+		// Lib.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
 
 		FlxG.mouse.useSystemCursor = true;
 
@@ -209,12 +209,12 @@ class Main extends Sprite
 	}
 	
 
-	function onKeyDown(evt:KeyboardEvent){
+	/*function onKeyDown(evt:KeyboardEvent){
 			if (evt.keyCode == Keyboard.F2){
 				trace('SCREENSHOT');
 				CoolSystemStuff.screenshot();
 			}
-	}
+	}*/
 		
 	private static function onStateSwitchPost() {
 		// manual asset clearing since base openfl one doesnt clear lime one
