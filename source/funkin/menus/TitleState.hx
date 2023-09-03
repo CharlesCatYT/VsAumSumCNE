@@ -21,6 +21,7 @@ import flixel.text.FlxText;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
+import funkin.backend.MusicBeatState;
 import funkin.backend.system.Conductor;
 import openfl.Assets;
 import haxe.xml.Access;

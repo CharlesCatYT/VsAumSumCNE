@@ -3,6 +3,7 @@ package funkin.editors;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.math.FlxPoint;
 import flixel.effects.FlxFlicker;
+import funkin.backend.MusicBeatSubstate;
 
 class EditorPicker extends MusicBeatSubstate {
 	public var bg:FlxSprite;

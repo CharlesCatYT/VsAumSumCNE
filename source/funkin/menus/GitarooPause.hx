@@ -1,6 +1,7 @@
 package funkin.menus;
 
 import flixel.graphics.frames.FlxAtlasFrames;
+import funkin.backend.MusicBeatState;
 
 class GitarooPause extends MusicBeatState
 {

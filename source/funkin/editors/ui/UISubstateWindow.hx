@@ -3,6 +3,7 @@ package funkin.editors.ui;
 import openfl.filters.ShaderFilter;
 import flixel.tweens.FlxTween;
 import funkin.backend.shaders.CustomShader;
+import funkin.backend.MusicBeatSubstate;
 
 // TODO: make UIWarningSubstate extend this
 class UISubstateWindow extends MusicBeatSubstate {

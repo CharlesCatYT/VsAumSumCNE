@@ -9,6 +9,7 @@ import openfl.ui.Mouse;
 import funkin.editors.ui.UIContextMenu.UIContextMenuOption;
 import flixel.math.FlxPoint;
 import openfl.ui.MouseCursor;
+import funkin.backend.MusicBeatState;
 import flixel.math.FlxRect;
 
 class UIState extends MusicBeatState {

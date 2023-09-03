@@ -9,6 +9,7 @@ import flixel.graphics.frames.FlxFramesCollection;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import funkin.backend.FunkinText;
+import funkin.backend.MusicBeatState;
 import haxe.xml.Access;
 import flixel.text.FlxText;
 

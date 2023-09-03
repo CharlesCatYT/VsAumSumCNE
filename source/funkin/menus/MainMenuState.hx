@@ -10,6 +10,7 @@ import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.text.FlxText;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
+import funkin.backend.MusicBeatState;
 import lime.app.Application;
 import funkin.backend.scripting.events.*;
 

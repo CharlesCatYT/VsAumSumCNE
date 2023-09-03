@@ -8,6 +8,7 @@ import funkin.backend.scripting.Script;
 import flixel.FlxSubState;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.input.keyboard.FlxKey;
+import funkin.backend.MusicBeatSubstate;
 import flixel.sound.FlxSound;
 import flixel.text.FlxText;
 import flixel.tweens.FlxTween;

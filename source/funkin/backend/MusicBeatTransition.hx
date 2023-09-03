@@ -3,6 +3,7 @@ package funkin.backend;
 import flixel.tweens.FlxTween;
 import flixel.FlxState;
 import funkin.backend.utils.FunkinParentDisabler;
+import funkin.backend.MusicBeatSubtate;
 
 class MusicBeatTransition extends MusicBeatSubstate {
 	var nextFrameSkip:Bool = false;

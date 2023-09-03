@@ -4,6 +4,7 @@ import openfl.filters.ShaderFilter;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import funkin.backend.shaders.CustomShader;
+import funkin.backend.MusicBeatSubtate;
 
 class UIWarningSubstate extends MusicBeatSubstate {
 	var camShaders:Array<FlxCamera> = [];

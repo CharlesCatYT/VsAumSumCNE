@@ -1,6 +1,6 @@
 package;
 
-#if (haxe >= "4.3.0" && !macro)
+#if !macro
 import haxe.*;
 import flixel.*;
 import openfl.*;
