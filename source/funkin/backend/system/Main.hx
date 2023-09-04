@@ -210,10 +210,10 @@ class Main extends Sprite
 	
 
 	/*function onKeyDown(evt:KeyboardEvent){
-			if (evt.keyCode == Keyboard.F2){
-				trace('SCREENSHOT');
-				CoolSystemStuff.screenshot();
-			}
+		if (evt.keyCode == Keyboard.F2){
+			trace('SCREENSHOT');
+			CoolSystemStuff.screenshot();
+		}
 	}*/
 		
 	private static function onStateSwitchPost() {
