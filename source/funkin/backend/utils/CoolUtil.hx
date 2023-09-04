@@ -42,7 +42,8 @@ class CoolUtil
 	 * Shortcut to parse JSON from an Asset path
 	 * @param assetPath Path to the JSON asset.
 	 */
-	public static function parseJson(assetPath:String) {
+	public static function parseJson(assetPath:String)
+	{
 		return Json.parse(Assets.getText(assetPath));
 	}
 
@@ -50,18 +51,27 @@ class CoolUtil
 	 * Deletes a folder recursively
 	 * @param delete Path to the folder.
 	 */
-	public static function deleteFolder(delete:String) {
+	public static function deleteFolder(delete:String)
+	{
 		#if sys
-		if (!sys.FileSystem.exists(delete)) return;
+		if (!sys.FileSystem.exists(delete))
+			return;
 		var files:Array<String> = sys.FileSystem.readDirectory(delete);
-		for(file in files) {
-			if (sys.FileSystem.isDirectory(delete + "/" + file)) {
+		for (file in files)
+		{
+			if (sys.FileSystem.isDirectory(delete + "/" + file))
+			{
 				deleteFolder(delete + "/" + file);
 				sys.FileSystem.deleteDirectory(delete + "/" + file);
-			} else {
-				try {
+			}
+			else
+			{
+				try
+				{
 					sys.FileSystem.deleteFile(delete + "/" + file);
-				} catch(e) {
+				}
+				catch (e)
+				{
 					Logs.trace("Could not delete " + delete + "/" + file, WARNING);
 				}
 			}

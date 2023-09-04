@@ -154,7 +154,9 @@ class StoryMenuState extends MusicBeatState
 			changeWeek((controls.UP_P ? -1 : 0) + (controls.DOWN_P ? 1 : 0));
 
 			if (controls.ACCEPT)
+			{
 				selectWeek();
+			}
 		}
 		else
 		{

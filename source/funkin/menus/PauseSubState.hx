@@ -54,13 +54,13 @@ class PauseSubState extends MusicBeatSubstate
 
 		menuItems = event.options;
 
-
 		pauseMusic = FlxG.sound.load(Paths.music(event.music), 0, true);
 		pauseMusic.persist = false;
 		pauseMusic.group = FlxG.sound.defaultMusicGroup;
 		pauseMusic.play(false, FlxG.random.int(0, Std.int(pauseMusic.length / 2)));
 
-		if (__cancelDefault = event.cancelled) return;
+		if (__cancelDefault = event.cancelled)
+			return;
 
 		var bg:FlxSprite = new FlxSprite().makeSolid(FlxG.width, FlxG.height, FlxColor.BLACK);
 		bg.updateHitbox();

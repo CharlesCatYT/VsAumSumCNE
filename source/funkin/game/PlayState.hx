@@ -1104,9 +1104,6 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		//iconP1.scale.set(lerp(iconP1.scale.x, 1, 0.33), lerp(iconP1.scale.y, 1, 0.33));
-		//iconP2.scale.set(lerp(iconP2.scale.x, 1, 0.33), lerp(iconP2.scale.y, 1, 0.33));
-
 		iconP1.centerOffsets();
 		iconP2.centerOffsets();
 
