@@ -29,8 +29,9 @@ jobs:
         run: |
           haxe -cp commandline -D analyzer-optimize --run Main setup
       - name: Building the game
+      # this shit keeps corrupting bro so I'm using -clean in order to clean this up, thanks Sword!
         run: |
-          haxelib run lime build windows
+          haxelib run lime build windows -clean
       - name: Uploading artifact (entire build)
         uses: actions/upload-artifact@v2
         with:
