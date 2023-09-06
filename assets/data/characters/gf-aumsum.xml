@@ -1,0 +1,7 @@
+<!DOCTYPE codename-engine-character>
+<character isPlayer="false" isGF="true" flipX="false" holdTime="4" x="20" y="200" camX="-200" camY="40"> <!-- CONVERTED VIA psychjsontocodenamexml.py by Burgerballs -->
+
+   <anim name="danceLeft" anim="gf aumsum dancing beat" loop="false" x="0" y="-9" indices="0,1,2,3,4,5"/>
+   <anim name="danceRight" anim="gf aumsum dancing beat" loop="false" x="0" y="-9" indices="8,9,10,11,12,13"/>
+
+</character>

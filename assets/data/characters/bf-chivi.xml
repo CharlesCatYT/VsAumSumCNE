@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<character isPlayer="true" flipX="true" holdTime="4" y="200"> <!-- CONVERTED VIA psychjsontocodenamexml.py by Burgerballs -->
+
+   <anim name="idle" anim="bf chivi idle" loop="false" x="-5" y="0"/>
+   <anim name="singLEFT" anim="bf chivi left" loop="false" x="13" y="3"/>
+   <anim name="singDOWN" anim="bf chivi down" loop="false" x="-25" y="-9"/>
+   <anim name="singUP" anim="bf chivi up" loop="false" x="29" y="23"/>
+   <anim name="singRIGHT" anim="bf chivi right" loop="false" x="-41" y="3"/>
+
+</character>

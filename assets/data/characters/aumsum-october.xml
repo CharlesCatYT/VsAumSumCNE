@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<character isPlayer="false" flipX="false" holdTime="6.1" y="150" camX="20" camY="-40" scale="1.2"> <!-- CONVERTED VIA psychjsontocodenamexml.py by Burgerballs -->
+
+   <anim name="singLEFT" anim="aumsum october left" fps="12" loop="false" x="-17" y="0"/>
+   <anim name="singDOWN" anim="aumsum october down" fps="12" loop="false" x="34" y="-25"/>
+   <anim name="singUP" anim="aumsum october up" fps="12" loop="false" x="-5" y="14"/>
+   <anim name="singRIGHT" anim="aumsum october right" fps="12" loop="false" x="-74" y="0"/>
+   <anim name="idle" anim="aumsum october idle" fps="12" loop="false" x="0" y="0"/>
+
+</character>

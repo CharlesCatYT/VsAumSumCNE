@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<character isPlayer="true" flipX="true" holdTime="6.1" x="50" y="220" camX="-340"> <!-- CONVERTED VIA psychjsontocodenamexml.py by Burgerballs -->
+
+   <anim name="singUP" anim="bf cart up" fps="50" loop="false" x="-7" y="8"/>
+   <anim name="singLEFT" anim="bf cart left" fps="50" loop="false" x="-7" y="2"/>
+   <anim name="singDOWN" anim="bf cart down" fps="50" loop="false" x="-7" y="-16"/>
+   <anim name="singRIGHT" anim="bf cart right" fps="50" loop="false" x="-7" y="-1"/>
+   <anim name="idle" anim="bf cart idle" fps="40" loop="false" x="0" y="0"/>
+
+</character>

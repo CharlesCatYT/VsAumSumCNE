@@ -1,0 +1,17 @@
+<!DOCTYPE codename-engine-character>
+<character isPlayer="true" flipX="true" holdTime="4" y="300" scale="1.1"> <!-- CONVERTED VIA psychjsontocodenamexml.py by Burgerballs -->
+
+   <anim name="singDOWNmiss" anim="bf aumsum new down miss" loop="false" x="-12" y="-5"/>
+   <anim name="singUPmiss" anim="bf aumsum new up miss" loop="false" x="-39" y="9"/>
+   <anim name="deathLoop" anim="bf aumsum new dead loop" loop="false" x="108" y="0"/>
+   <anim name="deathConfirm" anim="bf aumsum new dead confirm" loop="false" x="107" y="0"/>
+   <anim name="firstDeath" anim="bf aumsum new dies" loop="false" x="108" y="0"/>
+   <anim name="singDOWN" anim="bf aumsum new down" loop="false" x="-12" y="-5" indices="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19"/>
+   <anim name="singUP" anim="bf aumsum new up" loop="false" x="-39" y="9" indices="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19"/>
+   <anim name="singRIGHTmiss" anim="bf aumsum new left miss" loop="false" x="-34" y="2"/>
+   <anim name="singLEFTmiss" anim="bf aumsum new right miss" loop="false" x="78" y="79"/>
+   <anim name="singRIGHT" anim="bf aumsum new left" loop="false" x="-37" y="1" indices="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19"/>
+   <anim name="singLEFT" anim="bf aumsum new right" loop="false" x="84" y="103" indices="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19"/>
+   <anim name="idle" anim="bf aumsum new idle" loop="false" x="-6" y="0"/>
+
+</character>
