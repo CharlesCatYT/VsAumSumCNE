@@ -15,6 +15,7 @@
     <lib name="dox"/>
     <lib name="away3d" />
 	<lib name="format" />
+	<lib name="extension-androidtools" />
 	<lib name="markdown" />
 	<lib name="hxcpp-debug-server" />
 

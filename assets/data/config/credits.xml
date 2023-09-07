@@ -1,5 +1,8 @@
 <!DOCTYPE codename-mod-credits>
 <!-- TEMPLATE FOR CUSTOM CREDITS!!! -->
-<menu name="AumSum Credits" desc="Modify mod credits here">
+<menu name="Vs AumSum Credits" desc="Uhhh...">
 	<credit name="Isaiah Mods Official" desc="Director of the Mod!" icon="isaiah mods" size="130" url="https://youtu.be/fugtxz1znVw"/>
+	<credit name="CharlesCatYT" desc="Co-Director of the Mod!" icon="charles" size="130" url="https://youtu.be/fugtxz1znVw"/>
+	<credit name="MAJigsaw" desc="Android Code, cuz i have school idk" icon="jigsaw" size="130" url="https://youtu.be/fugtxz1znVw"/>
+	<credit name="Its AumSum Time" desc="Self-explanatory." icon="aumsum" size="130" url="https://youtu.be/fugtxz1znVw"/>
 </menu>

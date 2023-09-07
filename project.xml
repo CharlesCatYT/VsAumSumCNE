@@ -20,7 +20,7 @@
 
 	<set name="SWF_VERSION" value="11.8" />
 
-	<error value="Nintendo Switch is not supported. Seriously, why would you do that?" if="switch"/>
+	<error value="Nintendo Switch is not supported. Seriously, why would you do that?" if="switch" />
 
 	<!-- ____________________________ Window Settings ___________________________ -->
 
@@ -31,11 +31,12 @@
 	<window if="html5" resizable="true" />
 
 	<!--Desktop-specific-->
-	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true" vsync="false"/>
+	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true" vsync="false" />
 	<window if="mac" allow-high-dpi="true" />
 
 	<!--Mobile-specific-->
-	<window if="mobile" orientation="landscape" fullscreen="true" width="0" height="0" resizable="false"/>
+	<window if="mobile" orientation="landscape" fullscreen="true" width="0" height="0"
+		resizable="false" />
 
 	<!-- _____________________________ Path Settings ____________________________ -->
 
@@ -48,23 +49,25 @@
 	<classpath name="source" />
 
 	<define name="PRELOAD_ALL" unless="web" />
-	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/>
+	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL" />
 
 
-	<library name="assets"    preload="true"  if="PRELOAD_ALL"/>
-	<library name="assets"    preload="false" if="NO_PRELOAD_ALL" />
+	<library name="assets" preload="true" if="PRELOAD_ALL" />
+	<library name="assets" preload="false" if="NO_PRELOAD_ALL" />
 
 	<section unless="TEST_BUILD">
-		<assets path="assets/"    rename="assets"	exclude="*.ogg" if="web"/>
-		<assets path="assets/"    rename="assets"	exclude="*.mp3" unless="web"/>
+		<assets path="assets/" rename="assets" exclude="*.ogg" if="web" />
+		<assets path="assets/" rename="assets" exclude="*.mp3" unless="web" />
 	</section>
 
-	<assets path='mods' rename='mods' embed='false'/>
+	<assets path='mods' rename='mods' embed='false' />
 	<assets path='art/readme.txt' rename='do NOT readme.txt' />
 
 	<!-- ______________________________ Haxedefines _____________________________ -->
 
 	<haxeflag name="--macro" value="funkin.backend.system.macros.NewHaxeWarning.warn()" />
+	<haxeflag name="--macro" value="allowPackage('flash')" />
+	<haxeflag name="--macro" value="include('my.pack')" />
 
 	<!--Enable the Flixel core recording system-->
 	<haxedef name="FLX_RECORD" />
@@ -82,17 +85,17 @@
 	<haxedef name="NAPE_RELEASE_BUILD" unless="debug" />
 
 	<haxedef name="hscriptPos" /> <!-- for logging -->
-	<haxedef name="openflPos"/>
+	<haxedef name="openflPos" />
 
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
-	<icon path="art/icon16.png" size='16'/>
-	<icon path="art/icon32.png" size='24'/>
-	<icon path="art/icon32.png" size='32'/>
-	<icon path="art/icon64.png" size='40'/>
-	<icon path="art/icon64.png" size='48'/>
-	<icon path="art/icon64.png" size='64'/>
+	<icon path="art/icon16.png" size='16' />
+	<icon path="art/icon32.png" size='24' />
+	<icon path="art/icon32.png" size='32' />
+	<icon path="art/icon64.png" size='40' />
+	<icon path="art/icon64.png" size='48' />
+	<icon path="art/icon64.png" size='64' />
 	<icon path="art/iconOG.png" size='96' />
 	<icon path="art/iconOG.png" size='128' />
 	<icon path="art/iconOG.png" size='196' />
@@ -112,14 +115,14 @@
 	<!-- <define name="UPDATE_CHECKING" unless="web || hl || neko"/> -->
 
 	<!-- Fixes thing with macros -->
-	<define name="HL" if="hl"/>
-	<define name="SYS" if="desktop"/>
+	<define name="HL" if="hl" />
+	<define name="SYS" if="desktop" />
 
 	<!-- Comment this out to disable Discord RPC !-->
-	<define name="DISCORD_RPC" unless="web || hl || neko"/>
+	<define name="DISCORD_RPC" if="cpp" unless="mobile" />
 
 	<!-- Comment this out to disable GitHub API integration !-->
-	<define name="GITHUB_API" unless="web || hl"/>
+	<define name="GITHUB_API" unless="web || hl" />
 
 	<!-- Comment this out to prevent unused classes from being compiled.
 		 Reduces compilation time at the cost of limited HScript flexibility. !-->
@@ -130,13 +133,13 @@
 	<define name="CUSTOM_CLASSES" />
 
 	<!-- Comment this out to disable multithreading !-->
-	<haxedef name="ALLOW_MULTITHREADING" unless="web || flash" />
+	<haxedef name="ALLOW_MULTITHREADING" unless="web || mobile || flash" />
 
 	<!-- Comment this out to disable titlescreen.xml !-->
 	<haxedef name="TITLESCREEN_XML" />
 
 	<!-- Comment this out to disable mods folder !-->
-	<haxedef name="MOD_SUPPORT" unless="web"/>
+	<haxedef name="MOD_SUPPORT" unless="web" />
 
 	<!-- Comment this out to disable global scripts !-->
 	<haxedef name="GLOBAL_SCRIPT" />
@@ -147,8 +150,7 @@
 	<!-- Comment this out to use the default OpenFL assets system for the assets/ folder. !-->
 	<haxedef name="USE_ADAPTED_ASSETS" unless="web" />
 
-	<!-- Comment this out to disable support for custom ndlls. !-->
-	<haxedef name="NDLLS_SUPPORTED" unless="web" />
+	<haxedef name="NDLLS_SUPPORTED" unless="mobile || web" />
 
 	<!-- Comment this out to disable support for custom extended classes (data/classes). !-->
 	<define name="SOFTCODED_CLASSES" />
@@ -190,6 +192,7 @@
 	<haxelib name="discord-rpc" if="DISCORD_RPC"/>
 
 	<haxelib name="markdown" />
+	<haxelib name="extension-androidtools" if="android" />
 
 	<haxedef name="no-deprecation-warnings"/>
 
@@ -203,7 +206,7 @@
 
 	<!-- _________________________________ Additional stuff _______________________________ -->
 
-        <!-- HTML5 hasn't been tested. Also, I took this from MemeHoovy Engine.-->
+	<!-- HTML5 hasn't been tested. Also, I took this from MemeHoovy Engine.-->
 	<warn value="HTML5 builds haven't been tested and might not work, so beware of that." if="html5" />
 		
 	<section if="COMPILE_ALL_CLASSES">
