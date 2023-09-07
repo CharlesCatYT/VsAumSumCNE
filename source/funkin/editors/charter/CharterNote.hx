@@ -18,6 +18,9 @@ class CharterNote extends UISprite implements ICharterSelectable {
 	];
 
 	public var sustainSpr:FlxSprite;
+	public var selected:Bool = false;
+	public var numberLabel:UIText;
+
 	var __doAnim:Bool = false;
 
 	public var selected:Bool = false;
@@ -40,6 +43,11 @@ class CharterNote extends UISprite implements ICharterSelectable {
 		sustainSpr = new FlxSprite(10, 40);
 		sustainSpr.makeGraphic(1, 1, -1);
 		members.push(sustainSpr);
+		
+		numberLabel = new UIText(30,20,200,'',24,FlxColor.WHITE);
+		numberLabel.borderStyle = OUTLINE;
+		numberLabel.borderSize = 1;
+		numberLabel.borderColor = FlxColor.BLACK;
 	}
 
 	public override function updateButtonHandler() {
@@ -80,6 +88,9 @@ class CharterNote extends UISprite implements ICharterSelectable {
 			default: 0; // how is that even possible
 		};
 
+		// 0 is default !
+		numberLabel.text = type == 0 ? '' : Std.string(this.type);
+
 		sustainSpr.color = colors[animation.curAnim.curFrame];
 
 		if (!__doAnim) {
@@ -114,11 +125,14 @@ class CharterNote extends UISprite implements ICharterSelectable {
 	}
 
 	var __passed:Bool = false;
-	public override function update(elapsed:Float) {
+	public override function update(elapsed:Float) 
+	{
 		super.update(elapsed);
 
 		if(sustainSpr.exists)
 			sustainSpr.follow(this, 15, 20);
+
+		numberLabel.follow(this, 19, 15);
 
 		if (__passed != (__passed = step < Conductor.curStepFloat)) {
 			alpha = __passed ? 0.6 : 1;
@@ -158,5 +172,7 @@ class CharterNote extends UISprite implements ICharterSelectable {
 	public override function draw() {
 		drawMembers();
 		drawSuper();
+		if(type != 0)
+			numberLabel.draw();
 	}
 }
