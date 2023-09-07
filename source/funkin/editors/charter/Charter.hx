@@ -104,8 +104,6 @@ class Charter extends UIState {
 		96,
 		192
 	];
-	public var noteTypeDropdown:UIDropDown;
-
 	public function new(song:String, diff:String, reload:Bool = true) {
 		super();
 		__song = song;
@@ -245,24 +243,12 @@ class Charter extends UIState {
 					},
 					null,
 					{
-						label: "Switch to default note type",
-						keybind: [ZERO],
-						onSelect: _note_defaultnote
+						label: "(0) Default Note",
+						keybind: [ZERO]
 					},
 					{
-						label: "Switch to previous note type",
-						keybind: [ONE],
-						onSelect: _note_prevnote
-					},
-					{
-						label: "Switch to next note type",
-						keybind: [TWO],
-						onSelect: _note_nextnote
-					},
-					{
-						label: "Edit note types",
-						keybind: [],
-						onSelect: _edit_notetype
+						label: "(1) Hurt Note",
+						keybind: [ONE]
 					}
 				]
 			},
@@ -449,14 +435,6 @@ class Charter extends UIState {
 		addEventSpr.alpha = 0;
 		addEventSpr.cameras = [charterCamera];
 
-		var noteTypes:Array<String> = ['default'];
-		noteTypeDropdown = new UIDropDown(10,105,200,32,noteTypes);
-		noteTypeDropdown.onChange = function(n) {
-			for(note in selection)
-				note.updatePos(note.step,note.id,note.susLength,n); 
-		}
-		uiGroup.add(noteTypeDropdown);
-
 		// adds grid and notes so that they're ALWAYS behind the UI
 		add(gridBackdrop);
 		add(sectionSeparator);
@@ -527,7 +505,6 @@ class Charter extends UIState {
 		for(e in eventsGroup.members)
 			e.refreshEventIcons();
 
-		_reload_notetypes();
 		refreshBPMSensitive();
 	}
 
@@ -568,9 +545,6 @@ class Charter extends UIState {
 						else
 							selection = [cast n];
 					}
-
-					noteTypeDropdown.setOption(cast n.type);
-
 					if (FlxG.mouse.justReleasedRight) {
 						if (!selection.contains(cast n))
 							selection = [cast n];
@@ -680,9 +654,8 @@ class Charter extends UIState {
 							if (id >= 0 && id < 4 * gridBackdrop.strumlinesAmount && mousePos.y >= 0) {
 								var gridmult = 40 / (quantization / 16);
 								var note = new CharterNote();
-								note.updatePos(FlxG.keys.pressed.SHIFT ? (mousePos.y / 40) : snap(mousePos.y,gridmult)/40, id, 0, noteTypeDropdown.index);
+								note.updatePos(FlxG.keys.pressed.SHIFT ? (mousePos.y / 40) : snap(mousePos.y,gridmult)/40, id, 0, 0);
 								notesGroup.add(note);
-								trace(note.type);
 								selection = [note];
 								sortNotes();
 								addToUndo(CCreateSelection([note]));
@@ -1075,8 +1048,7 @@ class Charter extends UIState {
 	}
 
 	function _file_saveas(_) {
-		buildChart(); // note types are not saved i think
-		openSubState(new SaveSubstate(Json.stringify(Chart.filterChartForSaving(PlayState.SONG, false), null, "\t"), {
+		openSubState(new SaveSubstate(Json.stringify(Chart.filterChartForSaving(PlayState.SONG, false)), {
 			defaultSaveFile: '${__diff.toLowerCase()}.json'
 		}));
 	}
@@ -1307,50 +1279,6 @@ class Charter extends UIState {
 
 	#end
 
-	function _edit_notetype(t):Void
-	{
-		var state = new NoteTypeScreen(PlayState.SONG);
-		state.closeCallback = function() { _reload_notetypes(); };
-		state.closeRemoveNoteCallback = function(n) {
-			_reload_notetypes();
-			noteTypeDropdown.setOption(0);
-			notesGroup.forEach(function(note) {
-				if(note.type == n)
-					note.updatePos(note.step, note.id, note.susLength, 0);
-				if(note.type >= n)
-					note.updatePos(note.step, note.id, note.susLength, note.type-1);
-			});
-		};
-		FlxG.state.openSubState(state);
-	}
-
-	inline function _note_defaultnote(_)
-		noteTypeDropdown.setOption(0);
-	
-
-	inline function _note_prevnote(_) {
-		if(noteTypeDropdown.index == 0)
-			noteTypeDropdown.setOption(noteTypeDropdown.options.length - 1);
-		else
-			noteTypeDropdown.setOption(noteTypeDropdown.index - 1);
-	}
-		
-	inline function _note_nextnote(_) {
-		if(noteTypeDropdown.index == noteTypeDropdown.options.length - 1)
-			noteTypeDropdown.setOption(0);
-		else
-			noteTypeDropdown.setOption(noteTypeDropdown.index + 1);
-	}
-		
-
-	public function _reload_notetypes()
-	{
-		var noteTypes:Array<String> = ['default'];
-		for(noteType in PlayState.SONG.noteTypes)
-			noteTypes.push(noteType);
-		noteTypeDropdown.options = noteTypes;
-	}
-	
 	function changeNoteSustain(change:Float) {
 		if (selection.length <= 0 || change == 0) return;
 
@@ -1359,7 +1287,7 @@ class Charter extends UIState {
 				if (s is CharterNote) {
 					var n:CharterNote = cast(s, CharterNote);
 					var old:Float = n.susLength;
-					n.updatePos(n.step, n.id, Math.max(n.susLength + change, 0), n.type;
+					n.updatePos(n.step, n.id, Math.max(n.susLength + change, 0));
 
 					{
 						before: old,
