@@ -18,7 +18,7 @@ class CharterNote extends UISprite implements ICharterSelectable {
 	];
 
 	public var sustainSpr:FlxSprite;
-	public var selected:Bool = false;
+
 	public var numberLabel:UIText;
 
 	var __doAnim:Bool = false;
@@ -36,7 +36,7 @@ class CharterNote extends UISprite implements ICharterSelectable {
 
 		cursor = BUTTON;
 
-		//canBeHovered = false;
+		// canBeHovered = false;
 
 		moves = false;
 
@@ -58,11 +58,10 @@ class CharterNote extends UISprite implements ICharterSelectable {
 		UIState.state.updateRectButtonHandler(this, __rect, onHovered);
 	}
 
-
 	public var step:Float;
-	public var id:Int;
-	public var susLength:Float;
-	public var type:Int;
+	public var id(default, null):Int;
+	public var susLength(default, null):Float = 0;
+	public var type(default, null):Int = 0;
 
 	public function updatePos(step:Float, id:Int, susLength:Float = 0, type:Int = 0) {
 		this.step = step;

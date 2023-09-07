@@ -12,6 +12,7 @@ import funkin.backend.chart.*;
 import funkin.backend.chart.ChartData;
 import openfl.display.BitmapData;
 import flixel.util.FlxColor;
+import funkin.editors.charter.CharterNote;
 import flixel.addons.display.FlxBackdrop;
 import funkin.editors.ui.UIContextMenu.UIContextMenuOption;
 import funkin.editors.ui.UIState;
@@ -23,6 +24,7 @@ class Charter extends UIState {
 	var __reload:Bool;
 
 	var chart(get, null):ChartData;
+
 	private function get_chart()
 		return PlayState.SONG;
 
@@ -105,7 +107,7 @@ class Charter extends UIState {
 		192
 	];
 	public var noteTypeDropdown:UIDropDown;
-
+	
 	public function new(song:String, diff:String, reload:Bool = true) {
 		super();
 		__song = song;
@@ -450,10 +452,11 @@ class Charter extends UIState {
 		addEventSpr.cameras = [charterCamera];
 
 		var noteTypes:Array<String> = ['default'];
-		noteTypeDropdown = new UIDropDown(10,105,200,32,noteTypes);
+		noteTypeDropdown = new UIDropDown(10, 105, 200, 32, noteTypes);
 		noteTypeDropdown.onChange = function(n) {
+			var note:CharterNote;
 			for(note in selection)
-				note.updatePos(note.step,note.id,note.susLength,n); 
+				note.updatePos(note.step, note.id, note.susLength, n); 
 		}
 		uiGroup.add(noteTypeDropdown);
 
@@ -1359,7 +1362,7 @@ class Charter extends UIState {
 				if (s is CharterNote) {
 					var n:CharterNote = cast(s, CharterNote);
 					var old:Float = n.susLength;
-					n.updatePos(n.step, n.id, Math.max(n.susLength + change, 0), n.type;
+					n.updatePos(n.step, n.id, Math.max(n.susLength + change, 0), n.type);
 
 					{
 						before: old,
@@ -1479,3 +1482,4 @@ enum abstract CharterGridActionType(Int) {
 	var DRAG = 2;
 	var INVALID_DRAG = 3;
 }
+
