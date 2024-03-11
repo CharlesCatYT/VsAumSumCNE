@@ -12,9 +12,6 @@
 	-->
 	<app save-path="YoshiCrafter29/CodenameEngine" save-name="save-default" mod-saves="true" />
 
-	<!--Switch Export with Unique ApplicationID and Icon-->
-	<set name="APP_ID" value="0x0100f6c013bbc000" />
-
 	<!-- DO NOT REMOVE!! ALLOWS ME TO DO REGIONS LIKE IN C# AND KEEP CODE ORGANIZED. REMOVING IT WOULD BREAK THE ENGINE -->
 	<haxedef name="REGION" />
 
@@ -39,9 +36,6 @@
 
 	<!--Mobile-specific-->
 	<window if="mobile" orientation="landscape" fullscreen="true" width="0" height="0" resizable="false"/>
-
-	<!--Switch-specific-->
-	<window if="switch" orientation="landscape" fullscreen="true" width="0" height="0" resizable="true" />
 
 	<!-- _____________________________ Path Settings ____________________________ -->
 
@@ -97,7 +91,7 @@
 	<!-- _________________________________ Engine Settings _______________________________ -->
 
 	<!-- Comment this out to disable updates !-->
-	<!-- <define name="UPDATE_CHECKING" unless="web || hl || neko"/> -->
+	<!-- <define name="UPDATE_CHECKING" unless="web || hl || neko"/> --> <!-- not until we release it officially -->
 
 	<!-- Comment this out to disable Discord RPC !-->
 	<section if="cpp">
@@ -191,5 +185,6 @@
 	<haxedef name="HXCPP_STACK_LINE" if="release" />
 	<haxedef name="HXCPP_DEBUG_LINK" if="release" />
 
+	<haxedef name="openflPos" /> <!-- if it even allows that lmao -->
 	<haxedef name="hscriptPos" /> <!-- for logging -->
 </project>
