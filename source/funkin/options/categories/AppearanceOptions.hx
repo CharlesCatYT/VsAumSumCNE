@@ -2,7 +2,7 @@ package funkin.options.categories;
 
 class AppearanceOptions extends OptionsScreen {
 	public override function new() {
-		super("Appearance", "Change Appearance options such as Flashing menus...");
+		super("Appearance", "Change Appearance options such as Antialiasing & Menu Flashing...");
 		add(new NumOption(
 			"Framerate",
 			"Pretty self explanatory, isn't it?",
@@ -13,11 +13,11 @@ class AppearanceOptions extends OptionsScreen {
 			__changeFPS)); // callback
 		add(new Checkbox(
 			"Antialiasing",
-			"If unchecked, will disable antialiasing on every sprite. Can boost performances at the cost of sharper, more pixely sprites.",
+			"If unchecked, will disable antialiasing on every sprite. Can boost performances at the cost of sharper, more pixel-looking sprites.",
 			"antialiasing"));
 		add(new Checkbox(
 			"Colored Healthbar",
-			"If unchecked, the game will use the orginal red/green health bar from the week 6 fnf game.",
+			"If unchecked, the game will use the original Red/Green health bar colors from the vanilla FNF engine.",
 			"colorHealthBar"));
 		add(new Checkbox(
 			"Pixel Perfect Effect",
@@ -25,11 +25,11 @@ class AppearanceOptions extends OptionsScreen {
 			"week6PixelPerfect"));
 		add(new Checkbox(
 			"Gameplay Shaders",
-			"If unchecked, gameplay shaders (visual effects like Thorns's Chromatic Aberration) wont be loaded; this may be helpful on weak devices.",
+			"If unchecked, gameplay shaders (visual effects like Thorns's Chromatic Aberration) won't be loaded; this may be helpful on weak devices.",
 			"gameplayShaders"));
 		add(new Checkbox(
-			"Flashing Menu",
-			"If unchecked, will disable menu flashing when you select an option in the Main Menu, and other flashes will be slower.",
+			"Menu Flashing",
+			"If unchecked, will disable the menu's flashing effects when you select an option in the Main Menu, and other flashes will be slower.",
 			"flashingMenu"));
 		add(new Checkbox(
 			"Low Memory Mode",
