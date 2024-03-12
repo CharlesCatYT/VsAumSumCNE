@@ -46,7 +46,7 @@ class PlaytestingWarningSubstate extends MusicBeatSubstate
 
 		disclaimer = new FunkinText(16, titleAlphabet.y + titleAlphabet.height + 70, FlxG.width - 32, "", 32);
 		disclaimer.alignment = CENTER;
-		disclaimer.applyMarkup("Your changes will be *lost* if you don't save them. (Can't be recovered)\n\n\nWould you like to Cancel?",
+		disclaimer.applyMarkup("Your changes will be *lost* if you don't save them. (Can't be recovered)\n\n\nAre you sure to like to continue?",
 			[
 				new FlxTextFormatMarkerPair(new FlxTextFormat(0xFFFF4444), "*")
 			]
