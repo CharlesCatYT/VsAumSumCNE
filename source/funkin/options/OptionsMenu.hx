@@ -17,12 +17,12 @@ class OptionsMenu extends TreeMenu {
 		},
 		{
 			name: 'Gameplay >',
-			desc: 'Change Gameplay options such as Downscroll, Scroll Speed, Naughtyness...',
+			desc: 'Change Gameplay options such as Downscroll, Scroll Speed, Naughtiness...',
 			state: GameplayOptions
 		},
 		{
 			name: 'Appearance >',
-			desc: 'Change Appearance options such as Flashing menus...',
+			desc: 'Change Appearance options such as Antialiasing & Menu Flashing...',
 			state: AppearanceOptions
 		},
 		{
