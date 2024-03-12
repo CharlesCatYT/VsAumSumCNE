@@ -9,10 +9,10 @@ class GameplayOptions extends OptionsScreen {
 	var offsetSetting:NumOption;
 
 	public override function new() {
-		super("Gameplay", 'Change Gameplay options such as Downscroll, Scroll Speed, Naughtyness...');
+		super("Gameplay", 'Change Gameplay options such as Downscroll, Scroll Speed, Naughtiness...');
 		add(new Checkbox(
 			"Downscroll",
-			"If checked, notes will go from up to down instead of down to up, as if they're falling.",
+			"If checked, notes will go from up to down instead of down to up, as if they're falling down.",
 			"downscroll"));
 		add(new Checkbox(
 			"Ghost Tapping",
@@ -20,19 +20,19 @@ class GameplayOptions extends OptionsScreen {
 			"ghostTapping"));
 		add(offsetSetting = new NumOption(
 			"Song Offset",
-			"Changes the offset that songs should start with.",
+			"Changes the offset that songs should start with, great for Bluetooth headphones.",
 			-999, // minimum
 			999, // maximum
 			1, // change
 			"songOffset", // save name or smth
 			__changeOffset)); // callback
 		add(new Checkbox(
-			"Naughtyness",
-			"If unchecked, will censor the Week 7 cutscenes.",
+			"Naughtiness",
+			"If unchecked, will censor the cutscenes in Week 7.",
 			"naughtyness"));
 		add(new Checkbox(
 			"Camera Zoom on Beat",
-			"If unchecked, will stop the camera from zooming in every 4 beats",
+			"If unchecked, will stop the camera from zooming every measure, or 4 beats.",
 			"camZoomOnBeat"));
 	}
 
