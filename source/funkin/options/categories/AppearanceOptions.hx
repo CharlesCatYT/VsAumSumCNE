@@ -32,6 +32,10 @@ class AppearanceOptions extends OptionsScreen {
 			"If unchecked, will disable menu flashing when you select an option in the Main Menu, and other flashes will be slower.",
 			"flashingMenu"));
 		add(new Checkbox(
+			"Note Splashes",
+			"If unchecked, makes the note play a splash animation every hit.",
+			"splashesEnabled"));
+		add(new Checkbox(
 			"Low Memory Mode",
 			"If checked, will disable certain background elements in stages to reduce memory usage.",
 			"lowMemoryMode"));
